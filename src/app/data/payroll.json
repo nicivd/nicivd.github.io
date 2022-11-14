@@ -1,0 +1,46 @@
+{
+  "payrollAccountings": [
+    {
+      "name": "PROFFIX Lohnbuchhaltung 5",
+      "category": "Lohnbuchhaltung",
+      "price": 29,
+      "rent": "pauschal",
+      "dependency": 1
+    },
+    {
+      "name": "PROFFIX Lohnbuchhaltung 10",
+      "category": "Lohnbuchhaltung",
+      "price": 49,
+      "rent": "pauschal",
+      "dependency": 1
+    },
+    {
+      "name": "PROFFIX Lohnbuchhaltung 25",
+      "category": "Lohnbuchhaltung",
+      "price": 79,
+      "rent": "pauschal",
+      "dependency": 1
+    },
+    {
+      "name": "PROFFIX Lohnbuchhaltung 50",
+      "category": "Lohnbuchhaltung",
+      "price": 119,
+      "rent": "pauschal",
+      "dependency": 1
+    },
+    {
+      "name": "PROFFIX Lohnbuchhaltung 150",
+      "category": "Lohnbuchhaltung",
+      "price": 199,
+      "rent": "pauschal",
+      "dependency": 1
+    },
+    {
+      "name": "PROFFIX Lohnbuchhaltung 150+",
+      "category": "Lohnbuchhaltung",
+      "price": 279,
+      "rent": "pauschal",
+      "dependency": 1
+    }
+  ]
+}

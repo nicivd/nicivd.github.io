@@ -10,7 +10,7 @@ export class HomeComponent {
 
   constructor(private router: Router) { }
 
-  navigateToRentLicense() {
+  navigateToRentLicense(): void {
     this.router.navigate(['/rent-license']);
   }
 
