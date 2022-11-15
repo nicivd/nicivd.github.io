@@ -1,74 +1,72 @@
-{
-  "tools": [
-    {
-      "name": "PROFFIX Export-Modul",
-      "category": "Werkzeuge",
-      "price": 38,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Import-Modul",
-      "category": "Werkzeuge",
-      "price": 46,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Import Xtras",
-      "category": "Werkzeuge",
-      "price": 57,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX E-Dokument Basis (ink. DPD DELISprint)",
-      "category": "Werkzeuge",
-      "price": 19,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Option e-dec",
-      "category": "Werkzeuge",
-      "price": 57,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Option EDI",
-      "category": "Werkzeuge",
-      "price": 95,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Option GS1",
-      "category": "Werkzeuge",
-      "price": 57,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Option MediData",
-      "category": "Werkzeuge",
-      "price": 75,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Option Post Webservice Barcode",
-      "category": "Werkzeuge",
-      "price": 9,
-      "rent": "pauschal",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Treuhand-Modul",
-      "category": "Werkzeuge",
-      "price": 95,
-      "rent": "pauschal",
-      "dependency": 0
-    }
-  ]
-}
+[
+  {
+    "name": "PROFFIX Export-Modul",
+    "category": "Werkzeuge",
+    "price": 38,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Import-Modul",
+    "category": "Werkzeuge",
+    "price": 46,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Import Xtras",
+    "category": "Werkzeuge",
+    "price": 57,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX E-Dokument Basis (ink. DPD DELISprint)",
+    "category": "Werkzeuge",
+    "price": 19,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Option e-dec",
+    "category": "Werkzeuge",
+    "price": 57,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Option EDI",
+    "category": "Werkzeuge",
+    "price": 95,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Option GS1",
+    "category": "Werkzeuge",
+    "price": 57,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Option MediData",
+    "category": "Werkzeuge",
+    "price": 75,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Option Post Webservice Barcode",
+    "category": "Werkzeuge",
+    "price": 9,
+    "rent": "pauschal",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Treuhand-Modul",
+    "category": "Werkzeuge",
+    "price": 95,
+    "rent": "pauschal",
+    "dependency": 0
+  }
+]

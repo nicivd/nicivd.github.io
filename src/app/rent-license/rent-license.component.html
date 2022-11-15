@@ -2,15 +2,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
 </head>
-
-<body>
-
-  <div class="p-3 px-md-4 mb-3 border-bottom box-shadow">
-    <img class="img-fluid float-left" style="max-width: 30%;" src=" ../assets/Proffix_Logo.png" alt="">
+<header>
+  <div class="p-3 px-md-4 mb-3 border-bottom box-shadow headerFooter">
+    <img class="img-fluid float-left" style="max-width: 15%;" src=" ../assets/Proffix_Logo_Transparent.png" alt="">
     <h1 class="my-0 font-weight-bold text-center">Lizenzkalkulator</h1>
   </div>
+</header>
 
+<body class="px-3" style="padding-bottom:200px;">
   <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
     <ngb-panel>
       <ng-template ngbPanelTitle>
@@ -19,15 +20,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let bundle of bundles">
             <div class="col">
-              Modul
+              {{bundle.name}}
             </div>
             <div class="col">
-              75.-
+              {{bundle.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -40,15 +41,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let mainModule of mainmodules">
             <div class="col">
-              Modul
+              {{mainModule.name}}
             </div>
             <div class="col">
-              75.-
+              {{mainModule.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -61,15 +62,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let payroll of payroll">
             <div class="col">
-              Modul
+              {{payroll.name}}
             </div>
             <div class="col">
-              75.-
+              {{payroll.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -82,15 +83,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let addition of additionModules">
             <div class="col">
-              Modul
+              {{addition.name}}
             </div>
             <div class="col">
-              75.-
+              {{addition.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -103,15 +104,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let option of options">
             <div class="col">
-              Modul
+              {{option.name}}
             </div>
             <div class="col">
-              75.-
+              {{option.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -124,15 +125,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let tool of tools">
             <div class="col">
-              Modul
+              {{tool.name}}
             </div>
             <div class="col">
-              75.-
+              {{tool.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -145,15 +146,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let registration of registrations">
             <div class="col">
-              Modul
+              {{registration.name}}
             </div>
             <div class="col">
-              75.-
+              {{registration.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -166,15 +167,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let app of apps">
             <div class="col">
-              Modul
+              {{app.name}}
             </div>
             <div class="col">
-              75.-
+              {{app.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -187,15 +188,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let webservice of webservices">
             <div class="col">
-              Modul
+              {{webservice.name}}
             </div>
             <div class="col">
-              75.-
+              {{webservice.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -208,15 +209,15 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
+          <div class="row" *ngFor="let interface of interfaces">
             <div class="col">
-              Modul
+              {{interface.name}}
             </div>
             <div class="col">
-              75.-
+              {{interface.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
             </div>
           </div>
         </div>
@@ -227,37 +228,40 @@
 
   <hr>
 
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h3>Auswahl</h3>
+  <footer class="fixed-bottom border-top box-shadow  headerFooter">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Auswahl</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <button class="btn btn-lg btn-block"><i class="bi bi-x"></i></button>
+        </div>
+        <div class="col-5">
+          Modul
+        </div>
+        <div class="col-2">
+          75.-
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-1">
-        X
-      </div>
-      <div class="col-5">
-        Modul
-      </div>
-      <div class="col-2">
-        75.-
+    <hr>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2><b>Gesamtpreis =</b></h2>
+        </div>
+        <div class="col sm-2">
+          75.-
+        </div>
       </div>
     </div>
-  </div>
-  <hr>
 
+    <hr>
+  </footer>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2><b>Gesamtpreis =</b></h2>
-      </div>
-      <div class="col sm-2">
-        75.-
-      </div>
-    </div>
-  </div>
-
-  <hr>
+</body>

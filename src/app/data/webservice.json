@@ -1,11 +1,9 @@
-{
-  "webservices": [
-    {
-      "name": "PROFFIX E-Newsletter",
-      "category": "Webservice",
-      "price": 5,
-      "rent": "pauschal",
-      "dependency": 0
-    }
-  ]
-}
+[
+  {
+    "name": "PROFFIX E-Newsletter",
+    "category": "Webservice",
+    "price": 5,
+    "rent": "pauschal",
+    "dependency": 0
+  }
+]

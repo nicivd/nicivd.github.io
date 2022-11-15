@@ -1,18 +1,16 @@
-{
-  "apps": [
-    {
-      "name": "PROFFIX Zeiterfassung mobile",
-      "category": "REST API / Apps",
-      "price": 3,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Leistungserfassung mobile",
-      "category": "REST API / Apps",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    }
-  ]
-}
+[
+  {
+    "name": "PROFFIX Zeiterfassung mobile",
+    "category": "REST API / Apps",
+    "price": 3,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": "PROFFIX Leistungserfassung mobile",
+    "category": "REST API / Apps",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  }
+]
