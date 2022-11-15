@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Selection } from '../models/selection';
 
+import { ToastService } from './toast.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +13,9 @@ export class ObservableService {
 
   public selectionList = Array<Selection>();
 
-  constructor() { }
+  constructor(
+    private toastService: ToastService
+  ) { }
 
   public getSelectionObservable(): Observable<Array<Selection>> {
     return this.selectionSubject.asObservable();
@@ -27,8 +31,13 @@ export class ObservableService {
     } else {
       this.selectionList.forEach(module => {
         if (name == module.name) {
-          module.quantity++;
-          module.price = module.price + moduleprice;
+          if (module.rent == 'user') {
+            module.quantity++;
+            module.price = module.price + moduleprice;
+          }
+          else {
+            this.showNoQuantityToast();
+          }
         }
       })
     }
@@ -45,5 +54,9 @@ export class ObservableService {
       }
     });
     return this.selectionList;
+  }
+
+  public showNoQuantityToast(): void {
+    this.toastService.show('pauschale Module können nur einmal ausgewählt werden', { classname: 'bg-danger text-light', delay: 6000 });
   }
 }

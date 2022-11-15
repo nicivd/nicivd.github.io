@@ -18,6 +18,7 @@ import { Selection } from '../models/selection';
 import { ModalService } from '../service/modal.service';
 import { ObservableService } from '../service/observable.service';
 import { Subject, takeUntil } from 'rxjs';
+import { ToastService } from '../service/toast.service';
 
 @Component({
   selector: 'app-rent-license',
@@ -42,7 +43,8 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
 
   constructor(
     private modalService: ModalService,
-    private observableService: ObservableService
+    private observableService: ObservableService,
+    private toastService: ToastService
   ) { }
 
   ngOnInit(): void {

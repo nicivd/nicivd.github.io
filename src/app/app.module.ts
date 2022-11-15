@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { RentLicenseComponent } from './rent-license/rent-license.component';
+import { ToastComponent } from './shared/toast/toast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RentLicenseComponent,
+    ToastComponent,
 
   ],
   imports: [
