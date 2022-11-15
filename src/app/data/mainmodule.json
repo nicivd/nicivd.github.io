@@ -1,0 +1,51 @@
+[
+  {
+    "name": " Adressverwaltung",
+    "category": "Hauptmodule",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Artikel- und Lagerverwaltung",
+    "category": "Hauptmodule",
+    "price": 17,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Auftragsbearbeitung",
+    "category": "Hauptmodule",
+    "price": 25,
+    "rent": "user",
+    "dependency": 1
+  },
+  {
+    "name": " Debitorenbuchhaltung",
+    "category": "Hauptmodule",
+    "price": 13,
+    "rent": "user",
+    "dependency": 1
+  },
+  {
+    "name": " Kreditorenbuchhaltung",
+    "category": "Hauptmodule",
+    "price": 13,
+    "rent": "user",
+    "dependency": 1
+  },
+  {
+    "name": " Finanzbuchhaltung",
+    "category": "Hauptmodule",
+    "price": 25,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Einnahmen- Ausgabenrechnung",
+    "category": "Hauptmodule",
+    "price": 4,
+    "rent": "user",
+    "dependency": 0
+  }
+]

@@ -1,11 +1,9 @@
-{
-  "interfaces": [
-    {
-      "name": "CleverReach Newsletter Webtool",
-      "category": "Schnittstelle",
-      "price": 35,
-      "rent": "pauschal",
-      "dependency": 0
-    }
-  ]
-}
+[
+  {
+    "name": "CleverReach Newsletter Webtool",
+    "category": "Schnittstelle",
+    "price": 35,
+    "rent": "pauschal",
+    "dependency": 0
+  }
+]

@@ -1,74 +1,72 @@
-{
-  "options": [
-    {
-      "name": "PROFFIX Berechtigungen",
-      "category": "Optionen",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX E-Banking",
-      "category": "Optionen",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX E-Rechnung",
-      "category": "Optionen",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Kostenstellen",
-      "category": "Optionen",
-      "price": 13,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Konsolidierung",
-      "category": "Optionen",
-      "price": 13,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Rückstände/Reservationen/Teilrechnungen",
-      "category": "Optionen",
-      "price": 17,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Stücklisten/Bundles/Optionen",
-      "category": "Optionen",
-      "price": 13,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Chargen-/Seriennummernverwaltung",
-      "category": "Optionen",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Wartungsvertragsverwaltung",
-      "category": "Optionen",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Telefon-Integration",
-      "category": "Optionen",
-      "price": 4,
-      "rent": "user",
-      "dependency": 0
-    }
-  ]
-}
+[
+  {
+    "name": " Berechtigungen",
+    "category": "Optionen",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " E-Banking",
+    "category": "Optionen",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " E-Rechnung",
+    "category": "Optionen",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Kostenstellen",
+    "category": "Optionen",
+    "price": 13,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Konsolidierung",
+    "category": "Optionen",
+    "price": 13,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Rückstände/ Reservationen/ Teilrechnungen",
+    "category": "Optionen",
+    "price": 17,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Stücklisten/ Bundles/ Optionen",
+    "category": "Optionen",
+    "price": 13,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Chargen-/ Seriennummernverwaltung",
+    "category": "Optionen",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Wartungsvertragsverwaltung",
+    "category": "Optionen",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Telefon-Integration",
+    "category": "Optionen",
+    "price": 4,
+    "rent": "user",
+    "dependency": 0
+  }
+]

@@ -1,32 +1,30 @@
-{
-  "registration-programms": [
-    {
-      "name": "PROFFIX Adresserfassung",
-      "category": "Erfassungsprogramme",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX Leistungserfassung",
-      "category": "Erfassungsprogramme",
-      "price": 9,
-      "rent": "user",
-      "dependency": 0
-    },
-    {
-      "name": "PROFFIX CRM Erfassung",
-      "category": "Erfassungsprogramme",
-      "price": 9,
-      "rent": "user",
-      "dependency": 1
-    },
-    {
-      "name": "PROFFIX Zeiterfassung",
-      "category": "Erfassungsprogramme",
-      "price": 4,
-      "rent": "user",
-      "dependency": 0
-    }
-  ]
-}
+[
+  {
+    "name": " Adresserfassung",
+    "category": "Erfassungsprogramme",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " Leistungserfassung",
+    "category": "Erfassungsprogramme",
+    "price": 9,
+    "rent": "user",
+    "dependency": 0
+  },
+  {
+    "name": " CRM Erfassung",
+    "category": "Erfassungsprogramme",
+    "price": 9,
+    "rent": "user",
+    "dependency": 1
+  },
+  {
+    "name": " Zeiterfassung",
+    "category": "Erfassungsprogramme",
+    "price": 4,
+    "rent": "user",
+    "dependency": 0
+  }
+]

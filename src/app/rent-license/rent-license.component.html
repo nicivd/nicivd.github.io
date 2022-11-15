@@ -2,222 +2,257 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
 </head>
 
-<body>
 
-  <div class="p-3 px-md-4 mb-3 border-bottom box-shadow">
-    <img class="img-fluid float-left" style="max-width: 30%;" src=" ../assets/Proffix_Logo.png" alt="">
-    <h1 class="my-0 font-weight-bold text-center">Lizenzkalkulator</h1>
-  </div>
-
+<body class="px-3" style="padding-bottom:80px;">
   <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Proffix Pakete</b></h5>
+        <h6><b> Pakete</b></h6>
         <p>pro Benutzer</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let bundle of bundles">
+            <div class="col-7 xl-8 modulename">
+              {{bundle.name}}
             </div>
             <div class="col">
-              75.-
+              {{bundle.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(bundle.name, bundle.price, bundle.rent, bundle.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-panel>
+
+    <ngb-panel>
+      <ng-template ngbPanelTitle>
+        <h6><b>Hauptmodule</b></h6>
+        <p>pro Benutzer</p>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="container">
+          <div class="row" *ngFor="let mainModule of mainmodules">
+            <div class="col-7 xl-8 modulename">
+              {{mainModule.name}}
+            </div>
+            <div class="col">
+              {{mainModule.price}}.-
+            </div>
+            <div class="col">
+              <button type="button" class="btn"
+                (click)="addModule(mainModule.name, mainModule.price, mainModule.rent, mainModule.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
+            </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Hauptmodule</b></h5>
-        <p>pro Benutzer</p>
-      </ng-template>
-      <ng-template ngbPanelContent>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
-            </div>
-            <div class="col">
-              75.-
-            </div>
-            <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
-            </div>
-          </div>
-        </div>
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel>
-      <ng-template ngbPanelTitle>
-        <h5><b>Lohnbuchhaltung</b></h5>
+        <h6><b>Lohnbuchhaltung</b></h6>
         <p>pauschal</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let payroll of payroll">
+            <div class="col-7 xl-8 modulename">
+              {{payroll.name}}
             </div>
             <div class="col">
-              75.-
+              {{payroll.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(payroll.name, payroll.price, payroll.rent, payroll.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Zusatzmodule</b></h5>
+        <h6><b>Zusatzmodule</b></h6>
         <p>pro Benutzer</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let addition of additionModules">
+            <div class="col-7 xl-8 modulename">
+              {{addition.name}}
             </div>
             <div class="col">
-              75.-
+              {{addition.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(addition.name, addition.price, addition.rent, addition.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Optionen</b></h5>
+        <h6><b>Optionen</b></h6>
         <p>pro Benutzer</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let option of options">
+            <div class="col-7 xl-8 modulename">
+              {{option.name}}
             </div>
             <div class="col">
-              75.-
+              {{option.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(option.name, option.price, option.rent, option.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Werkzeuge</b></h5>
+        <h6><b>Werkzeuge</b></h6>
         <p>pauschal</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let tool of tools">
+            <div class="col-7 xl-8 modulename">
+              {{tool.name}}
             </div>
             <div class="col">
-              75.-
+              {{tool.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn" (click)="addModule(tool.name, tool.price, tool.rent, tool.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Erfassungsprogramme</b></h5>
+        <h6><b>Erfassungsprogramme</b></h6>
         <p>pro Benutzer</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let registration of registrations">
+            <div class="col-7 xl-8 modulename">
+              {{registration.name}}
             </div>
             <div class="col">
-              75.-
+              {{registration.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(registration.name, registration.price, registration.rent, registration.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Rest API/Apps</b></h5>
+        <h6><b>Rest API/Apps</b></h6>
         <p>pro Benutzer</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let app of apps">
+            <div class="col-7 xl-8 modulename">
+              {{app.name}}
             </div>
             <div class="col">
-              75.-
+              {{app.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn" (click)="addModule(app.name, app.price, app.rent, app.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Webservice</b></h5>
+        <h6><b>Webservice</b></h6>
         <p>pauschal</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let webservice of webservices">
+            <div class="col-7 xl-8 modulename">
+              {{webservice.name}}
             </div>
             <div class="col">
-              75.-
+              {{webservice.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(webservice.name, webservice.price, webservice.rent, webservice.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
       <ng-template ngbPanelTitle>
-        <h5><b>Schnittstelle</b></h5>
+        <h6><b>Schnittstelle</b></h6>
         <p>pauschal</p>
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="container">
-          <div class="row">
-            <div class="col">
-              Modul
+          <div class="row" *ngFor="let interface of interfaces">
+            <div class="col-7 xl-8 modulename">
+              {{interface.name}}
             </div>
             <div class="col">
-              75.-
+              {{interface.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn btn-light"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(interface.name, interface.price, interface.rent, interface.dependency)">
+                <i class="bi bi-plus-circle"></i>
+              </button>
             </div>
+            <hr>
           </div>
         </div>
       </ng-template>
@@ -226,38 +261,57 @@
   </ngb-accordion>
 
   <hr>
-
-
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <h3>Auswahl</h3>
+    <div class="row" *ngFor="let selection of selectionList">
+      <div class="col-7">
+        <button class="btn" (click)="deleteModule(selection.name)"><i class="bi bi-x"></i></button>
+        {{selection.name}}
       </div>
-    </div>
-    <div class="row">
-      <div class="col-1">
-        X
-      </div>
-      <div class="col-5">
-        Modul
+      <div class="col-3">
+        {{selection.price}}.-
       </div>
       <div class="col-2">
-        75.-
+        {{selection.quantity}}
       </div>
-    </div>
-  </div>
-  <hr>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2><b>Gesamtpreis =</b></h2>
-      </div>
-      <div class="col sm-2">
-        75.-
-      </div>
+      <hr>
     </div>
   </div>
 
-  <hr>
+
+  <footer class="fixed-bottom border-top box-shadow  headerFooter">
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3><b>Gesamtpreis =</b></h3>
+        </div>
+        <div class="col sm-2">
+          <b>{{this.additionService.total}}.-</b>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </footer>
+
+</body>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Paket Hinweis</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="mb-3">
+      <label for="dateOfBirth">Ausgewählte Module auch als Paket erhältlich:</label>
+      <p>KMU CLASSIC</p>
+      <p>75.-</p>
+      <label for="dateOfBirth">Paket auswählen?</label>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Abbrechen</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Auswählen</button>
+  </div>
+</ng-template>
+
+<hr />
