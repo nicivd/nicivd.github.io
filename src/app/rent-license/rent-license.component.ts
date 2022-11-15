@@ -13,6 +13,7 @@ import interfaceData from '../data/interface.json';
 
 import { Modules } from '../models/module';
 import { Bundels } from '../models/bundels';
+import { ModalService } from '../service/modal.service';
 
 @Component({
   selector: 'app-rent-license',
@@ -32,7 +33,12 @@ export class RentLicenseComponent {
   public webservices: Modules[] = webserviceData;
   public interfaces: Modules[] = interfaceData;
 
-  constructor() { }
+  constructor(
+    private modalService: ModalService
+  ) { }
 
+  public openModal(content: any): void {
+    this.modalService.open(content);
+  }
 
 }

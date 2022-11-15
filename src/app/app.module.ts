@@ -11,7 +11,8 @@ import { RentLicenseComponent } from './rent-license/rent-license.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    RentLicenseComponent
+    RentLicenseComponent,
+
   ],
   imports: [
     BrowserModule,

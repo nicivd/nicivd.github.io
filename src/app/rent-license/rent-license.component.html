@@ -265,3 +265,23 @@
   </footer>
 
 </body>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Paket Hinweis</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="mb-3">
+      <label for="dateOfBirth">Ausgewählte Module auch als Paket erhältlich:</label>
+      <p>KMU CLASSIC</p>
+      <p>75.-</p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Abbrechen</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Auswählen</button>
+  </div>
+</ng-template>
+
+<hr />
