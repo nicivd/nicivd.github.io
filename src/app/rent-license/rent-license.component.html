@@ -23,7 +23,9 @@
               {{bundle.price}}.-
             </div>
             <div class="col">
-              <button type="button" class="btn"><i class="bi bi-plus-circle"></i></button>
+              <button type="button" class="btn"
+                (click)="addModule(bundle.name, bundle.price, bundle.rent, bundle.dependency)">
+                <i class="bi bi-plus-circle"></i></button>
             </div>
             <hr>
           </div>
@@ -234,15 +236,18 @@
 
   <hr>
   <div class="container">
-    <div class="row">
+    <div class="row" *ngFor="let selection of selectionList">
       <div class="col-1">
         <button class="btn"><i class="bi bi-x"></i></button>
       </div>
       <div class="col-5">
-        Modul
+        {{selection.name}}
       </div>
       <div class="col-2">
-        75.-
+        {{selection.price}}.-
+      </div>
+      <div class="col-2">
+        {{selection.quantity}}
       </div>
       <hr>
     </div>
@@ -276,6 +281,7 @@
       <label for="dateOfBirth">Ausgewählte Module auch als Paket erhältlich:</label>
       <p>KMU CLASSIC</p>
       <p>75.-</p>
+      <label for="dateOfBirth">Paket auswählen?</label>
     </div>
   </div>
   <div class="modal-footer">

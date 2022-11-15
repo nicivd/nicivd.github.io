@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import mainModulesdata from '../data/mainmodule.json';
 import bundlesData from '../data/bundle.json';
@@ -13,14 +13,18 @@ import interfaceData from '../data/interface.json';
 
 import { Modules } from '../models/module';
 import { Bundels } from '../models/bundels';
+import { Selection } from '../models/selection';
+
 import { ModalService } from '../service/modal.service';
+import { ObservableService } from '../service/observable.service';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-rent-license',
   templateUrl: './rent-license.component.html',
   styleUrls: ['./rent-license.component.scss']
 })
-export class RentLicenseComponent {
+export class RentLicenseComponent implements OnInit, OnDestroy {
 
   public bundles: Bundels[] = bundlesData;
   public mainmodules: Modules[] = mainModulesdata;
@@ -33,12 +37,34 @@ export class RentLicenseComponent {
   public webservices: Modules[] = webserviceData;
   public interfaces: Modules[] = interfaceData;
 
+  public selectionList = new Array<Selection>();
+  private unsubscribe = new Subject<void>();
+
   constructor(
-    private modalService: ModalService
+    private modalService: ModalService,
+    private observableService: ObservableService
   ) { }
+
+  ngOnInit(): void {
+    this.observableService.getSelectionObservable().pipe(takeUntil(this.unsubscribe)).subscribe(
+      selection => {
+        this.selectionList = selection;
+        console.log(this.selectionList);
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe.next();
+    this.unsubscribe.unsubscribe();
+  }
+
 
   public openModal(content: any): void {
     this.modalService.open(content);
+  }
+
+  public addModule(modulename: string, price: number, rent: string, dependency: number): void {
+    this.observableService.addModule(modulename, price, rent, dependency);
   }
 
 }
