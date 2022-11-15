@@ -1,4 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
+
+import { Modules } from '../models/module';
+import { Bundels } from '../models/bundels';
+import { Selection } from '../models/selection';
+
+import { ModalService } from '../service/modal.service';
+import { ObservableService } from '../service/observable.service';
+import { AdditionService } from '../service/total.service';
 
 import mainModulesdata from '../data/mainmodule.json';
 import bundlesData from '../data/bundle.json';
@@ -10,15 +19,6 @@ import regData from '../data/registration-programm.json';
 import appData from '../data/app.json';
 import webserviceData from '../data/webservice.json';
 import interfaceData from '../data/interface.json';
-
-import { Modules } from '../models/module';
-import { Bundels } from '../models/bundels';
-import { Selection } from '../models/selection';
-
-import { ModalService } from '../service/modal.service';
-import { ObservableService } from '../service/observable.service';
-import { Subject, takeUntil } from 'rxjs';
-import { ToastService } from '../service/toast.service';
 
 @Component({
   selector: 'app-rent-license',
@@ -39,20 +39,21 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   public interfaces: Modules[] = interfaceData;
 
   public selectionList = new Array<Selection>();
+
   private unsubscribe = new Subject<void>();
 
   constructor(
     private modalService: ModalService,
     private observableService: ObservableService,
-    private toastService: ToastService
+    public additionService: AdditionService
   ) { }
 
   ngOnInit(): void {
     this.observableService.getSelectionObservable().pipe(takeUntil(this.unsubscribe)).subscribe(
       selection => {
         this.selectionList = selection;
-        console.log(this.selectionList);
       });
+
   }
 
   ngOnDestroy(): void {
@@ -67,10 +68,17 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
 
   public addModule(modulename: string, price: number, rent: string, dependency: number): void {
     this.observableService.addModule(modulename, price, rent, dependency);
+    this.getTotalPrice();
   }
 
-  public deleteModule(name: string) {
+  public deleteModule(name: string): void {
     this.observableService.deleteModule(name);
+    this.getTotalPrice();
+  }
+
+  public getTotalPrice(): void {
+    this.additionService.getTotalPrice();
+
   }
 
 }

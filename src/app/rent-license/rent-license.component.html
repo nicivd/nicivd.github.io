@@ -263,13 +263,11 @@
   <hr>
   <div class="container">
     <div class="row" *ngFor="let selection of selectionList">
-      <div class="col-1">
+      <div class="col-7">
         <button class="btn" (click)="deleteModule(selection.name)"><i class="bi bi-x"></i></button>
-      </div>
-      <div class="col-5">
         {{selection.name}}
       </div>
-      <div class="col-2">
+      <div class="col-3">
         {{selection.price}}.-
       </div>
       <div class="col-2">
@@ -288,7 +286,7 @@
           <h3><b>Gesamtpreis =</b></h3>
         </div>
         <div class="col sm-2">
-          75.-
+          <b>{{this.additionService.total}}.-</b>
         </div>
       </div>
     </div>
