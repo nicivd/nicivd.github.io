@@ -1,48 +1,48 @@
 [
   {
-    "name": "PROFFIX Adressverwaltung",
+    "name": " Adressverwaltung",
     "category": "Hauptmodule",
     "price": 9,
     "rent": "user",
     "dependency": 0
   },
   {
-    "name": "PROFFIX Artikel- und Lagerverwaltung",
+    "name": " Artikel- und Lagerverwaltung",
     "category": "Hauptmodule",
     "price": 17,
     "rent": "user",
     "dependency": 0
   },
   {
-    "name": "PROFFIX Auftragsbearbeitung",
+    "name": " Auftragsbearbeitung",
     "category": "Hauptmodule",
     "price": 25,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Debitorenbuchhaltung",
+    "name": " Debitorenbuchhaltung",
     "category": "Hauptmodule",
     "price": 13,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Kreditorenbuchhaltung",
+    "name": " Kreditorenbuchhaltung",
     "category": "Hauptmodule",
     "price": 13,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Finanzbuchhaltung",
+    "name": " Finanzbuchhaltung",
     "category": "Hauptmodule",
     "price": 25,
     "rent": "user",
     "dependency": 0
   },
   {
-    "name": "PROFFIX Einnahmen- Ausgabenrechnung",
+    "name": " Einnahmen- Ausgabenrechnung",
     "category": "Hauptmodule",
     "price": 4,
     "rent": "user",

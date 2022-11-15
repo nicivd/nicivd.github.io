@@ -1,7 +1,17 @@
-.headerFooter {
+Footer {
   background-color: var(--color-title);
 }
 
 p {
   margin-left: 1%;
+}
+
+@media (max-width: 482px) {
+  .modulename {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 2.8vw;
+  }
 }

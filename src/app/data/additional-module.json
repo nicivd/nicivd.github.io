@@ -1,76 +1,76 @@
 [
   {
-    "name": "PROFFIX Leistungsverwaltung",
+    "name": " Leistungsverwaltung",
     "category": "Zusatzmodule",
     "price": 28,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Kundeninstallationsverwaltung",
+    "name": " Kundeninstallationsverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Serviceauftragsverwatlung",
+    "name": " Serviceauftragsverwatlung",
     "category": "Zusatzmodule",
     "price": 25,
     "rent": "user",
     "dependency": 2
   },
   {
-    "name": "PROFFIX Einkaufsverwaltung",
+    "name": " Einkaufsverwaltung",
     "category": "Zusatzmodule",
     "price": 25,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Preisverwaltung",
+    "name": " Preisverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
     "dependency": 0
   },
   {
-    "name": "PROFFIX Provisionsverwaltung",
+    "name": " Provisionsverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
     "dependency": 0
   },
   {
-    "name": "PROFFIX Rückstände/Reservationen/Teilrechnungen",
+    "name": " Rückstände/ Reservationen/ Teilrechnungen",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
     "dependency": 0
   },
   {
-    "name": "PROFFIX CRM",
+    "name": " CRM",
     "category": "Zusatzmodule",
     "price": 9,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Zählerverwaltung",
+    "name": " Zählerverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
     "dependency": 1
   },
   {
-    "name": "PROFFIX Ressourcenverwaltung",
+    "name": "Ressourcenverwaltung",
     "category": "Zusatzmodule",
     "price": 25,
     "rent": "user",
     "dependency": 0
   },
   {
-    "name": "PROFFIX Zeitverwaltung",
+    "name": "Zeitverwaltung",
     "category": "Zusatzmodule",
     "price": 9,
     "rent": "user",
