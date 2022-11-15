@@ -36,4 +36,14 @@ export class ObservableService {
     return this.selectionList;
 
   }
+
+  public deleteModule(name: string): Array<Selection> {
+    this.selectionList.forEach(module => {
+      if (name == module.name) {
+        const index: number = this.selectionList.indexOf(module);
+        this.selectionList.splice(index, 1);
+      }
+    });
+    return this.selectionList;
+  }
 }

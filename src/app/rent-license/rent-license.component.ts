@@ -67,4 +67,8 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
     this.observableService.addModule(modulename, price, rent, dependency);
   }
 
+  public deleteModule(name: string) {
+    this.observableService.deleteModule(name);
+  }
+
 }

@@ -6,7 +6,7 @@
 </head>
 
 
-<body class="px-3" style="padding-bottom:200px;">
+<body class="px-3" style="padding-bottom:80px;">
   <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
     <ngb-panel>
       <ng-template ngbPanelTitle>
@@ -238,7 +238,7 @@
   <div class="container">
     <div class="row" *ngFor="let selection of selectionList">
       <div class="col-1">
-        <button class="btn"><i class="bi bi-x"></i></button>
+        <button class="btn" (click)="deleteModule(selection.name)"><i class="bi bi-x"></i></button>
       </div>
       <div class="col-5">
         {{selection.name}}
@@ -252,7 +252,7 @@
       <hr>
     </div>
   </div>
-  <hr>
+
 
   <footer class="fixed-bottom border-top box-shadow  headerFooter">
     <hr>
