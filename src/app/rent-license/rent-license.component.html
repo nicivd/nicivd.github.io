@@ -16,17 +16,22 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let bundle of bundles">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-6 xl-8 modulename">
               {{bundle.name}}
             </div>
             <div class="col">
               {{bundle.price}}.-
             </div>
-            <div class="col">
-              <button type="button" class="btn"
-                (click)="addModule(bundle.name, bundle.price, bundle.rent, bundle.dependency)">
-                <i class="bi bi-plus-circle"></i>
-              </button>
+            <div class="col-2">
+              <div class="input-group w-auto justify-content-end align-items-center">
+                <button type="button" class="btn" (click)="deleteModule(bundle.name, bundle.price)">
+                  <i class="bi bi-dash-circle"></i>
+                </button>
+                <button type="button" value="+" class="btn"
+                  (click)="addModule(bundle.name, bundle.price, bundle.rent, bundle.dependency)">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
             </div>
             <hr>
           </div>
@@ -48,11 +53,16 @@
             <div class="col">
               {{mainModule.price}}.-
             </div>
-            <div class="col">
-              <button type="button" class="btn"
-                (click)="addModule(mainModule.name, mainModule.price, mainModule.rent, mainModule.dependency)">
-                <i class="bi bi-plus-circle"></i>
-              </button>
+            <div class="col-2">
+              <div class="input-group w-auto justify-content-end align-items-center">
+                <button type="button" class="btn" (click)="deleteModule(mainModule.name, mainModule.price)">
+                  <i class="bi bi-dash-circle"></i>
+                </button>
+                <button type="button" value="+" class="btn"
+                  (click)="addModule(mainModule.name, mainModule.price, mainModule.rent, mainModule.dependency)">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
             </div>
             <hr>
           </div>
@@ -73,7 +83,7 @@
             <div class="col">
               {{payroll.price}}.-
             </div>
-            <div class="col">
+            <div class="col-2">
               <button type="button" class="btn"
                 (click)="addModule(payroll.name, payroll.price, payroll.rent, payroll.dependency)">
                 <i class="bi bi-plus-circle"></i>
@@ -98,11 +108,16 @@
             <div class="col">
               {{addition.price}}.-
             </div>
-            <div class="col">
-              <button type="button" class="btn"
-                (click)="addModule(addition.name, addition.price, addition.rent, addition.dependency)">
-                <i class="bi bi-plus-circle"></i>
-              </button>
+            <div class="col-2">
+              <div class="input-group w-auto justify-content-end align-items-center">
+                <button type="button" class="btn" (click)="deleteModule(addition.name, addition.price)">
+                  <i class="bi bi-dash-circle"></i>
+                </button>
+                <button type="button" class="btn"
+                  (click)="addModule(addition.name, addition.price, addition.rent, addition.dependency)">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
             </div>
             <hr>
           </div>
@@ -123,11 +138,16 @@
             <div class="col">
               {{option.price}}.-
             </div>
-            <div class="col">
-              <button type="button" class="btn"
-                (click)="addModule(option.name, option.price, option.rent, option.dependency)">
-                <i class="bi bi-plus-circle"></i>
-              </button>
+            <div class="col-2">
+              <div class="input-group w-auto justify-content-end align-items-center">
+                <button type="button" class="btn" (click)="deleteModule(option.name, option.price)">
+                  <i class="bi bi-dash-circle"></i>
+                </button>
+                <button type="button" class="btn"
+                  (click)="addModule(option.name, option.price, option.rent, option.dependency)">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
             </div>
             <hr>
           </div>
@@ -172,11 +192,16 @@
             <div class="col">
               {{registration.price}}.-
             </div>
-            <div class="col">
-              <button type="button" class="btn"
-                (click)="addModule(registration.name, registration.price, registration.rent, registration.dependency)">
-                <i class="bi bi-plus-circle"></i>
-              </button>
+            <div class="col-2">
+              <div class="input-group w-auto justify-content-end align-items-center">
+                <button type="button" class="btn" (click)="deleteModule(registration.name, registration.price)">
+                  <i class="bi bi-dash-circle"></i>
+                </button>
+                <button type="button" class="btn"
+                  (click)="addModule(registration.name, registration.price, registration.rent, registration.dependency)">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
             </div>
             <hr>
           </div>
@@ -197,10 +222,15 @@
             <div class="col">
               {{app.price}}.-
             </div>
-            <div class="col">
-              <button type="button" class="btn" (click)="addModule(app.name, app.price, app.rent, app.dependency)">
-                <i class="bi bi-plus-circle"></i>
-              </button>
+            <div class="col-2">
+              <div class="input-group w-auto justify-content-end align-items-center">
+                <button type="button" class="btn" (click)="deleteModule(app.name, app.price)">
+                  <i class="bi bi-dash-circle"></i>
+                </button>
+                <button type="button" class="btn" (click)="addModule(app.name, app.price, app.rent, app.dependency)">
+                  <i class="bi bi-plus-circle"></i>
+                </button>
+              </div>
             </div>
             <hr>
           </div>
@@ -247,6 +277,7 @@
               {{interface.price}}.-
             </div>
             <div class="col">
+
               <button type="button" class="btn"
                 (click)="addModule(interface.name, interface.price, interface.rent, interface.dependency)">
                 <i class="bi bi-plus-circle"></i>
@@ -261,26 +292,51 @@
   </ngb-accordion>
 
   <hr>
-  <div class="container">
-    <div class="row" *ngFor="let selection of selectionList">
-      <div class="col-7">
-        <button class="btn" (click)="deleteModule(selection.name)"><i class="bi bi-x"></i></button>
-        {{selection.name}}
-      </div>
-      <div class="col-3">
-        {{selection.price}}.-
-      </div>
-      <div class="col-2">
-        {{selection.quantity}}
-      </div>
-      <hr>
-    </div>
-  </div>
+  <footer class="fixed-bottom border-top box-shadow">
+    <ngb-accordion>
+      <ngb-panel>
+        <ng-template ngbPanelTitle>
+          <h5><b>Auswahl</b></h5>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <div class=" container px-1">
+            <div class="row">
+              <div class="col-6">
+                <h6>Bezeichnung</h6>
+              </div>
+              <div class="col-2">
+                <h6>Preis</h6>
+              </div>
+              <div class="col-2">
+                <h6>Menge</h6>
+              </div>
+              <div class="col-1">
+                <h6>Rabatt</h6>
+              </div>
+            </div>
+            <div class="row" *ngFor="let selection of selectionList">
+              <div class="col-6 modulename">
+                <button class="btn" (click)="deletefromSelection(selection.name, selection.price)"><i
+                    class="bi bi-x"></i></button>
+                {{selection.name}}
+              </div>
+              <div class="col-2">
+                {{selection.price}}.-
+              </div>
+              <div class="col-2">
+                {{selection.quantity}}
+              </div>
+              <div class="col-1">
+                {{selection.discount}}%
+              </div>
+              <hr>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
 
-
-  <footer class="fixed-bottom border-top box-shadow  headerFooter">
-    <hr>
-    <div class="container">
+    <div class="container headerFooter">
       <div class="row">
         <div class="col">
           <h3><b>Gesamtpreis =</b></h3>

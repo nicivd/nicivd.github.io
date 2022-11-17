@@ -4,6 +4,7 @@
     "category": "Schnittstelle",
     "price": 35,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   }
 ]

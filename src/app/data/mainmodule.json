@@ -1,51 +1,58 @@
 [
   {
-    "name": " Adressverwaltung",
+    "name": "Adressverwaltung",
     "category": "Hauptmodule",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Artikel- und Lagerverwaltung",
+    "name": "Artikel- und Lagerverwaltung",
     "category": "Hauptmodule",
     "price": 17,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Auftragsbearbeitung",
+    "name": "Auftragsbearbeitung",
     "category": "Hauptmodule",
     "price": 25,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Debitorenbuchhaltung",
+    "name": "Debitorenbuchhaltung",
     "category": "Hauptmodule",
     "price": 13,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Kreditorenbuchhaltung",
+    "name": "Kreditorenbuchhaltung",
     "category": "Hauptmodule",
     "price": 13,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Finanzbuchhaltung",
+    "name": "Finanzbuchhaltung",
     "category": "Hauptmodule",
     "price": 25,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Einnahmen- Ausgabenrechnung",
+    "name": "Einnahmen- Ausgabenrechnung",
     "category": "Hauptmodule",
     "price": 4,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   }
 ]

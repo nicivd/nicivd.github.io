@@ -1,16 +1,18 @@
 [
   {
-    "name": " Zeiterfassung mobile",
+    "name": "Zeiterfassung mobile",
     "category": "REST API / Apps",
     "price": 3,
     "rent": "user",
-    "dependency": 0
+    "dependency": 3,
+    "quantity": 0
   },
   {
-    "name": " Leistungserfassung mobile",
+    "name": "Leistungserfassung mobile",
     "category": "REST API / Apps",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 3,
+    "quantity": 0
   }
 ]

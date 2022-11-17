@@ -1,44 +1,50 @@
 [
   {
-    "name": " Lohnbuchhaltung 5",
+    "name": "Lohnbuchhaltung 5",
     "category": "Lohnbuchhaltung",
     "price": 29,
     "rent": "pauschal",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Lohnbuchhaltung 10",
+    "name": "Lohnbuchhaltung 10",
     "category": "Lohnbuchhaltung",
     "price": 49,
     "rent": "pauschal",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Lohnbuchhaltung 25",
+    "name": "Lohnbuchhaltung 25",
     "category": "Lohnbuchhaltung",
     "price": 79,
     "rent": "pauschal",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Lohnbuchhaltung 50",
+    "name": "Lohnbuchhaltung 50",
     "category": "Lohnbuchhaltung",
     "price": 119,
     "rent": "pauschal",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Lohnbuchhaltung 150",
+    "name": "Lohnbuchhaltung 150",
     "category": "Lohnbuchhaltung",
     "price": 199,
     "rent": "pauschal",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Lohnbuchhaltung 150+",
+    "name": "Lohnbuchhaltung 150+",
     "category": "Lohnbuchhaltung",
     "price": 279,
     "rent": "pauschal",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   }
 ]

@@ -1,4 +1,4 @@
-export enum Sale {
+export enum Discount {
   '1 Benutzer' = 0,
   '2 Benutzer' = 4,
   '3 Benutzer' = 6,

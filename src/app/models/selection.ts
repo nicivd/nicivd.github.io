@@ -4,4 +4,5 @@ export interface Selection {
   rent: string;
   dependency: number;
   quantity: number;
+  discount: number;
 }
