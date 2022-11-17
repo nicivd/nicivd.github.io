@@ -1,6 +1,6 @@
-# Lizenzkalkulator
+# Licensecalculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+Proffix License calculator for the existing project PX5. The user or Proffix collaborator can select the desired modules and the programm calculates the total. Discounts and bundles are considered.
 
 ## Development server
 
@@ -12,7 +12,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
+Run `npm run Build:prod` to build the project for GitHub Pages. The build artifacts will be stored in the `docs/` directory.
 
 ## Running unit tests
 

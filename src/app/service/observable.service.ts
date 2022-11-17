@@ -24,7 +24,7 @@ export class ObservableService {
   public addModule(name: string, price: number, rent: string, dependency: number): Array<Selection> {
     const moduleprice = price;
     if (this.selectionList.find((selection) => selection.name == name) == undefined) {
-      const selection: Selection = { name: name, price: price, rent: rent, dependency: dependency, quantity: 1 };
+      const selection: Selection = { name: name, price: price, rent: rent, dependency: dependency, quantity: 1, discount: 0 };
 
       this.selectionList.push(selection);
       this.selectionSubject.next(this.selectionList);

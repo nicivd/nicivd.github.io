@@ -261,17 +261,34 @@
   </ngb-accordion>
 
   <hr>
-  <div class="container">
+  <div class="container px-1" style="background-color: #ededed; border-radius: 6px">
+    <div class="row" style="background-color: #c6c6c6; border-radius: 6px">
+      <div class="col-6">
+        <h6>Bezeichnung</h6>
+      </div>
+      <div class="col-2">
+        <h6>Preis</h6>
+      </div>
+      <div class="col-2">
+        <h6>Menge</h6>
+      </div>
+      <div class="col-1">
+        <h6>Rabatt</h6>
+      </div>
+    </div>
     <div class="row" *ngFor="let selection of selectionList">
-      <div class="col-7">
+      <div class="col-6 modulename">
         <button class="btn" (click)="deleteModule(selection.name)"><i class="bi bi-x"></i></button>
         {{selection.name}}
       </div>
-      <div class="col-3">
+      <div class="col-2">
         {{selection.price}}.-
       </div>
       <div class="col-2">
         {{selection.quantity}}
+      </div>
+      <div class="col-1">
+        {{selection.discount}}%
       </div>
       <hr>
     </div>
