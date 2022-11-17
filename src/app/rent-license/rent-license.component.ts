@@ -19,6 +19,7 @@ import regData from '../data/registration-programm.json';
 import appData from '../data/app.json';
 import webserviceData from '../data/webservice.json';
 import interfaceData from '../data/interface.json';
+import { DependencyService } from '../service/dependency.service';
 
 @Component({
   selector: 'app-rent-license',
@@ -41,11 +42,14 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   public selectionList = new Array<Selection>();
 
   private unsubscribe = new Subject<void>();
+  time = { hour: 13, minute: 30 };
+
 
   constructor(
     private modalService: ModalService,
     private observableService: ObservableService,
-    public additionService: AdditionService
+    public additionService: AdditionService,
+    private dependencyService: DependencyService
   ) { }
 
   ngOnInit(): void {
@@ -67,6 +71,7 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   }
 
   public addModule(modulename: string, price: number, rent: string, dependency: number): void {
+    this.dependencyService.getDependency(dependency);
     this.observableService.addModule(modulename, price, rent, dependency);
     this.getTotalPrice();
   }

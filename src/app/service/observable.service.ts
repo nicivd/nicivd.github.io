@@ -25,7 +25,6 @@ export class ObservableService {
     const moduleprice = price;
     if (this.selectionList.find((selection) => selection.name == name) == undefined) {
       const selection: Selection = { name: name, price: price, rent: rent, dependency: dependency, quantity: 1, discount: 0 };
-
       this.selectionList.push(selection);
       this.selectionSubject.next(this.selectionList);
     } else {
@@ -57,6 +56,6 @@ export class ObservableService {
   }
 
   public showNoQuantityToast(): void {
-    this.toastService.show('pauschale Module können nur einmal ausgewählt werden', { classname: 'bg-danger text-light', delay: 6000 });
+    this.toastService.show('Achtung: pauschale Module nur einmal buchbar !', { classname: 'bg-danger text-light', delay: 6000 });
   }
 }
