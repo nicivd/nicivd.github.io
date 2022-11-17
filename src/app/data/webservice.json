@@ -1,9 +1,10 @@
 [
   {
-    "name": " E-Newsletter",
+    "name": "E-Newsletter",
     "category": "Webservice",
     "price": 5,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   }
 ]

@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 
 import { Modules } from '../models/module';
-import { Bundels } from '../models/bundels';
 import { Selection } from '../models/selection';
 
 import { ModalService } from '../service/modal.service';
@@ -28,7 +27,7 @@ import { DependencyService } from '../service/dependency.service';
 })
 export class RentLicenseComponent implements OnInit, OnDestroy {
 
-  public bundles: Bundels[] = bundlesData;
+  public bundles: Modules[] = bundlesData;
   public mainmodules: Modules[] = mainModulesdata;
   public payroll: Modules[] = payrollData;
   public additionModules: Modules[] = additionModulesData;
@@ -76,11 +75,14 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
     this.getTotalPrice();
   }
 
-  public deleteModule(name: string): void {
-    this.observableService.deleteModule(name);
+  public deleteModule(name: string, price: number): void {
+    this.observableService.deleteModule(name, price);
     this.getTotalPrice();
   }
-
+  public deletefromSelection(name: string, price: number): void {
+    this.observableService.deletefromSelection(name, price);
+    this.getTotalPrice();
+  }
   public getTotalPrice(): void {
     this.additionService.getTotalPrice();
 

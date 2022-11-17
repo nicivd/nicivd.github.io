@@ -1,72 +1,82 @@
 [
   {
-    "name": " Export-Modul",
+    "name": "Export-Modul",
     "category": "Werkzeuge",
     "price": 38,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Import-Modul",
+    "name": "Import-Modul",
     "category": "Werkzeuge",
     "price": 46,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Import Xtras",
+    "name": "Import Xtras",
     "category": "Werkzeuge",
     "price": 57,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " E-Dokument Basis (ink. DPD DELISprint)",
+    "name": "E-Dokument Basis (ink. DPD DELISprint)",
     "category": "Werkzeuge",
     "price": 19,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Option e-dec",
+    "name": "Option e-dec",
     "category": "Werkzeuge",
     "price": 57,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Option EDI",
+    "name": "Option EDI",
     "category": "Werkzeuge",
     "price": 95,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Option GS1",
+    "name": "Option GS1",
     "category": "Werkzeuge",
     "price": 57,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Option MediData",
+    "name": "Option MediData",
     "category": "Werkzeuge",
     "price": 75,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Option Post Webservice Barcode",
+    "name": "Option Post Webservice Barcode",
     "category": "Werkzeuge",
     "price": 9,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Treuhand-Modul",
+    "name": "Treuhand-Modul",
     "category": "Werkzeuge",
     "price": 95,
     "rent": "pauschal",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   }
 ]

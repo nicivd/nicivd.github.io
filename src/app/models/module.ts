@@ -4,5 +4,5 @@ export interface Modules {
   price: number;
   rent: string;
   dependency: number;
-
+  quantity: number;
 }

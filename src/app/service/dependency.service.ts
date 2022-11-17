@@ -1,31 +1,38 @@
 import { Injectable } from '@angular/core';
 import { ObservableService } from './observable.service';
 import { ToastService } from './toast.service';
+import { Selection } from '../models/selection';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DependencyService {
 
-  private foundAdressModule: boolean = false;
-  private foundCostumerModule: boolean = false;
+  public selectionList = new Array<Selection>();
 
   constructor(
     private observableService: ObservableService,
     private toastService: ToastService
-  ) { }
+  ) {
+    this.observableService.getSelectionObservable().subscribe(
+      selection => {
+        this.selectionList = selection;
+      });
+
+  }
 
   public getDependency(dependency: number): void {
-    this.getAdressModule();
     if (dependency == 1) {
-      if (!this.foundAdressModule) {
+      if (this.selectionList.find((selection) => selection.name == 'Adressverwaltung' || selection.name == 'KMU CLASSIC') == undefined) {
         this.observableService.addModule('Adressverwaltung', 9, 'user', 0);
         this.getfirstDependencyToast();
       }
     }
     if (dependency == 2) {
-      if (!this.foundAdressModule && !this.foundCostumerModule) {
-        this.observableService.addModule('Adressverwaltung', 9, 'user', 0);
+      if (this.selectionList.find((selection) => selection.name == 'Kundeninstallationsverwaltung' || selection.name == 'SERVICE MANAGEMENT') == undefined) {
+        if (this.selectionList.find((selection) => selection.name == 'Adressverwaltung' || selection.name == 'KMU CLASSIC') == undefined) {
+          this.observableService.addModule('Adressverwaltung', 9, 'user', 0);
+        }
         this.observableService.addModule('Kundeninstallationsverwaltung', 17, 'user', 1);
         this.getsecondDependencyToast();
       }
@@ -33,22 +40,6 @@ export class DependencyService {
     if (dependency == 3) {
       this.getthirdDependencyToast();
     }
-  }
-
-  public getAdressModule(): void {
-    this.observableService.selectionList.forEach(module => {
-      if (module.name == 'Adressverwaltung' || module.name == 'KMU CLASSIC') {
-        this.foundAdressModule = true;
-      }
-    });
-  }
-
-  public getCostumerModule(): void {
-    this.observableService.selectionList.forEach(module => {
-      if (module.name == 'Kundeninstallationsverwaltung' || module.name == 'SERVICE MANAGEMENT') {
-        this.foundCostumerModule = true;
-      }
-    });
   }
 
   public getfirstDependencyToast(): void {

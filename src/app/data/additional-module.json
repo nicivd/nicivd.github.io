@@ -1,79 +1,90 @@
 [
   {
-    "name": " Leistungsverwaltung",
+    "name": "Leistungsverwaltung",
     "category": "Zusatzmodule",
     "price": 28,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Kundeninstallationsverwaltung",
+    "name": "Kundeninstallationsverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Serviceauftragsverwatlung",
+    "name": "Serviceauftragsverwatlung",
     "category": "Zusatzmodule",
     "price": 25,
     "rent": "user",
-    "dependency": 2
+    "dependency": 2,
+    "quantity": 0
   },
   {
-    "name": " Einkaufsverwaltung",
+    "name": "Einkaufsverwaltung",
     "category": "Zusatzmodule",
     "price": 25,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Preisverwaltung",
+    "name": "Preisverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Provisionsverwaltung",
+    "name": "Provisionsverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Rückstände/ Reservationen/ Teilrechnungen",
+    "name": "Rückstände/ Reservationen/ Teilrechnungen",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " CRM",
+    "name": "CRM",
     "category": "Zusatzmodule",
     "price": 9,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Zählerverwaltung",
+    "name": "Zählerverwaltung",
     "category": "Zusatzmodule",
     "price": 17,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
     "name": "Ressourcenverwaltung",
     "category": "Zusatzmodule",
     "price": 25,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
     "name": "Zeitverwaltung",
     "category": "Zusatzmodule",
     "price": 9,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   }
 ]

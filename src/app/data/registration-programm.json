@@ -1,30 +1,34 @@
 [
   {
-    "name": " Adresserfassung",
+    "name": "Adresserfassung",
     "category": "Erfassungsprogramme",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Leistungserfassung",
+    "name": "Leistungserfassung",
     "category": "Erfassungsprogramme",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " CRM Erfassung",
+    "name": "CRM Erfassung",
     "category": "Erfassungsprogramme",
     "price": 9,
     "rent": "user",
-    "dependency": 1
+    "dependency": 1,
+    "quantity": 0
   },
   {
-    "name": " Zeiterfassung",
+    "name": "Zeiterfassung",
     "category": "Erfassungsprogramme",
     "price": 4,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   }
 ]

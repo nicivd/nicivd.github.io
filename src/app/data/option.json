@@ -1,72 +1,82 @@
 [
   {
-    "name": " Berechtigungen",
+    "name": "Berechtigungen",
     "category": "Optionen",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " E-Banking",
+    "name": "E-Banking",
     "category": "Optionen",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " E-Rechnung",
+    "name": "E-Rechnung",
     "category": "Optionen",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Kostenstellen",
+    "name": "Kostenstellen",
     "category": "Optionen",
     "price": 13,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Konsolidierung",
+    "name": "Konsolidierung",
     "category": "Optionen",
     "price": 13,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Rückstände/ Reservationen/ Teilrechnungen",
+    "name": "Rückstände/ Reservationen/ Teilrechnungen",
     "category": "Optionen",
     "price": 17,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Stücklisten/ Bundles/ Optionen",
+    "name": "Stücklisten/ Bundles/ Optionen",
     "category": "Optionen",
     "price": 13,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Chargen-/ Seriennummernverwaltung",
+    "name": "Chargen-/ Seriennummernverwaltung",
     "category": "Optionen",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Wartungsvertragsverwaltung",
+    "name": "Wartungsvertragsverwaltung",
     "category": "Optionen",
     "price": 9,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   },
   {
-    "name": " Telefon-Integration",
+    "name": "Telefon-Integration",
     "category": "Optionen",
     "price": 4,
     "rent": "user",
-    "dependency": 0
+    "dependency": 0,
+    "quantity": 0
   }
 ]
