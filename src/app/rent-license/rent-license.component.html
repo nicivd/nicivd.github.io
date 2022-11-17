@@ -24,7 +24,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(bundle.name, bundle.price, bundle.dependency)">
+                <button type="button" class="btn" (click)="deleteModule(bundle.name, bundle.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" value="+" class="btn"
@@ -55,8 +55,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn"
-                  (click)="deleteModule(mainModule.name, mainModule.price, mainModule.dependency)">
+                <button type="button" class="btn" (click)="deleteModule(mainModule.name, mainModule.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" value="+" class="btn"
@@ -111,8 +110,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn"
-                  (click)="deleteModule(addition.name, addition.price, addition.dependency)">
+                <button type="button" class="btn" (click)="deleteModule(addition.name, addition.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn"
@@ -142,7 +140,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(option.name, option.price, option.dependency)">
+                <button type="button" class="btn" (click)="deleteModule(option.name, option.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn"
@@ -196,8 +194,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn"
-                  (click)="deleteModule(registration.name, registration.price, registration.dependency )">
+                <button type="button" class="btn" (click)="deleteModule(registration.name, registration.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn"
@@ -227,7 +224,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(app.name, app.price, app.dependency)">
+                <button type="button" class="btn" (click)="deleteModule(app.name, app.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn" (click)="addModule(app.name, app.price, app.rent, app.dependency)">
@@ -299,11 +296,11 @@
     <ngb-accordion>
       <ngb-panel>
         <ng-template ngbPanelTitle>
-          <h6><b>Auswahl</b></h6>
+          <h5><b>Auswahl</b></h5>
         </ng-template>
         <ng-template ngbPanelContent>
-          <div class="container px-1">
-            <div class="row" style="background-color:#ededed; border-radius: 6px">
+          <div class=" container px-1">
+            <div class="row">
               <div class="col-6">
                 <h6>Bezeichnung</h6>
               </div>
@@ -319,8 +316,7 @@
             </div>
             <div class="row" *ngFor="let selection of selectionList">
               <div class="col-6 modulename">
-                <button class="btn"
-                  (click)="deletefromSelection(selection.name, selection.price, selection.dependency)"><i
+                <button class="btn" (click)="deletefromSelection(selection.name, selection.price)"><i
                     class="bi bi-x"></i></button>
                 {{selection.name}}
               </div>

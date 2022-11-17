@@ -71,12 +71,12 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
     this.getTotalPrice();
   }
 
-  public deleteModule(name: string, price: number, dependency: number): void {
+  public deleteModule(name: string, price: number): void {
     this.observableService.deleteModule(name, price);
     this.dependencyService.getDependency();
     this.getTotalPrice();
   }
-  public deletefromSelection(name: string, price: number, dependency: number): void {
+  public deletefromSelection(name: string, price: number): void {
     this.observableService.deletefromSelection(name, price);
     this.dependencyService.getDependency();
     this.getTotalPrice();
