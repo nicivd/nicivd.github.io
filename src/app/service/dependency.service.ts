@@ -18,10 +18,9 @@ export class DependencyService {
       selection => {
         this.selectionList = selection;
       });
-
   }
 
-  public getDependency(dependency: number): void {
+  public addDependency(dependency: number): void {
     if (dependency == 1) {
       if (this.selectionList.find((selection) => selection.name == 'Adressverwaltung' || selection.name == 'KMU CLASSIC') == undefined) {
         this.observableService.addModule('Adressverwaltung', 9, 'user', 0);
@@ -39,6 +38,15 @@ export class DependencyService {
     }
     if (dependency == 3) {
       this.getthirdDependencyToast();
+    }
+  }
+
+  public getDependency(): void {
+    if (this.selectionList.find(selection => selection.dependency == 1)) {
+      this.addDependency(1)
+    }
+    if (this.selectionList.find(selection => selection.dependency == 2)) {
+      this.addDependency(2)
     }
   }
 

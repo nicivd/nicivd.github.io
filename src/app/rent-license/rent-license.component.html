@@ -24,7 +24,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(bundle.name, bundle.price)">
+                <button type="button" class="btn" (click)="deleteModule(bundle.name, bundle.price, bundle.dependency)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" value="+" class="btn"
@@ -55,7 +55,8 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(mainModule.name, mainModule.price)">
+                <button type="button" class="btn"
+                  (click)="deleteModule(mainModule.name, mainModule.price, mainModule.dependency)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" value="+" class="btn"
@@ -110,7 +111,8 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(addition.name, addition.price)">
+                <button type="button" class="btn"
+                  (click)="deleteModule(addition.name, addition.price, addition.dependency)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn"
@@ -140,7 +142,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(option.name, option.price)">
+                <button type="button" class="btn" (click)="deleteModule(option.name, option.price, option.dependency)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn"
@@ -194,7 +196,8 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(registration.name, registration.price)">
+                <button type="button" class="btn"
+                  (click)="deleteModule(registration.name, registration.price, registration.dependency )">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn"
@@ -224,7 +227,7 @@
             </div>
             <div class="col-2">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(app.name, app.price)">
+                <button type="button" class="btn" (click)="deleteModule(app.name, app.price, app.dependency)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
                 <button type="button" class="btn" (click)="addModule(app.name, app.price, app.rent, app.dependency)">
@@ -316,7 +319,8 @@
             </div>
             <div class="row" *ngFor="let selection of selectionList">
               <div class="col-6 modulename">
-                <button class="btn" (click)="deletefromSelection(selection.name, selection.price)"><i
+                <button class="btn"
+                  (click)="deletefromSelection(selection.name, selection.price, selection.dependency)"><i
                     class="bi bi-x"></i></button>
                 {{selection.name}}
               </div>

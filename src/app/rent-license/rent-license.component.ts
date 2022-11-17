@@ -41,8 +41,6 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   public selectionList = new Array<Selection>();
 
   private unsubscribe = new Subject<void>();
-  time = { hour: 13, minute: 30 };
-
 
   constructor(
     private modalService: ModalService,
@@ -56,7 +54,6 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
       selection => {
         this.selectionList = selection;
       });
-
   }
 
   ngOnDestroy(): void {
@@ -64,28 +61,28 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
     this.unsubscribe.unsubscribe();
   }
 
-
   public openModal(content: any): void {
     this.modalService.open(content);
   }
 
   public addModule(modulename: string, price: number, rent: string, dependency: number): void {
-    this.dependencyService.getDependency(dependency);
+    this.dependencyService.addDependency(dependency);
     this.observableService.addModule(modulename, price, rent, dependency);
     this.getTotalPrice();
   }
 
-  public deleteModule(name: string, price: number): void {
+  public deleteModule(name: string, price: number, dependency: number): void {
     this.observableService.deleteModule(name, price);
+    this.dependencyService.getDependency();
     this.getTotalPrice();
   }
-  public deletefromSelection(name: string, price: number): void {
+  public deletefromSelection(name: string, price: number, dependency: number): void {
     this.observableService.deletefromSelection(name, price);
+    this.dependencyService.getDependency();
     this.getTotalPrice();
   }
   public getTotalPrice(): void {
     this.additionService.getTotalPrice();
-
   }
 
 }

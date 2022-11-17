@@ -63,13 +63,7 @@ export class ObservableService {
     this.selectionList.forEach(module => {
       if (name == module.name) {
         const moduleprice = price / module.quantity;
-        if (module.quantity == 1) {
-          const index: number = this.selectionList.indexOf(module);
-          this.selectionList.splice(index, 1);
-        } else {
-          module.quantity--;
-          module.price = module.price - moduleprice;
-        }
+        this.deleteModule(name, moduleprice)
       }
     });
     return this.selectionList;
