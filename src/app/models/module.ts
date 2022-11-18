@@ -5,4 +5,5 @@ export interface Modules {
   rent: string;
   dependency: number;
   quantity: number;
+  bundle: string;
 }

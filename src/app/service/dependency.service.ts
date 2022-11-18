@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ObservableService } from './selection.service';
+import { SelectionService } from './selection.service';
 import { ToastService } from './toast.service';
 import { Selection } from '../models/selection';
 
@@ -11,10 +11,10 @@ export class DependencyService {
   public selectionList = new Array<Selection>();
 
   constructor(
-    private observableService: ObservableService,
+    private selectionService: SelectionService,
     private toastService: ToastService
   ) {
-    this.observableService.getSelectionObservable().subscribe(
+    this.selectionService.getSelectionObservable().subscribe(
       selection => {
         this.selectionList = selection;
       });
@@ -23,16 +23,16 @@ export class DependencyService {
   public addDependency(dependency: number): void {
     if (dependency == 1) {
       if (this.selectionList.find((selection) => selection.name == 'Adressverwaltung' || selection.name == 'KMU CLASSIC') == undefined) {
-        this.observableService.addModule('Adressverwaltung', 9, 'user', 0);
+        this.selectionService.addModule('Adressverwaltung', 9, 'user', 0);
         this.getfirstDependencyToast();
       }
     }
     if (dependency == 2) {
       if (this.selectionList.find((selection) => selection.name == 'Kundeninstallationsverwaltung' || selection.name == 'SERVICE MANAGEMENT') == undefined) {
         if (this.selectionList.find((selection) => selection.name == 'Adressverwaltung' || selection.name == 'KMU CLASSIC') == undefined) {
-          this.observableService.addModule('Adressverwaltung', 9, 'user', 0);
+          this.selectionService.addModule('Adressverwaltung', 9, 'user', 0);
         }
-        this.observableService.addModule('Kundeninstallationsverwaltung', 17, 'user', 1);
+        this.selectionService.addModule('Kundeninstallationsverwaltung', 17, 'user', 1);
         this.getsecondDependencyToast();
       }
     }

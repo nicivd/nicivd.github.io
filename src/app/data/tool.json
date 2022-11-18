@@ -5,7 +5,8 @@
     "price": 38,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Import-Modul",
@@ -13,7 +14,8 @@
     "price": 46,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Import Xtras",
@@ -21,7 +23,8 @@
     "price": 57,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "E-Dokument Basis (ink. DPD DELISprint)",
@@ -29,7 +32,8 @@
     "price": 19,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Option e-dec",
@@ -37,7 +41,8 @@
     "price": 57,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Option EDI",
@@ -45,7 +50,8 @@
     "price": 95,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Option GS1",
@@ -53,7 +59,8 @@
     "price": 57,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Option MediData",
@@ -61,7 +68,8 @@
     "price": 75,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Option Post Webservice Barcode",
@@ -69,7 +77,8 @@
     "price": 9,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Treuhand-Modul",
@@ -77,6 +86,7 @@
     "price": 95,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

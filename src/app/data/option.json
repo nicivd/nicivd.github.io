@@ -5,7 +5,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "E-Banking",
@@ -13,7 +14,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "E-Rechnung",
@@ -21,7 +23,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Kostenstellen",
@@ -29,7 +32,8 @@
     "price": 13,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Konsolidierung",
@@ -37,7 +41,8 @@
     "price": 13,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Rückstände/ Reservationen/ Teilrechnungen",
@@ -45,7 +50,8 @@
     "price": 17,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Stücklisten/ Bundles/ Optionen",
@@ -53,7 +59,8 @@
     "price": 13,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Chargen-/ Seriennummernverwaltung",
@@ -61,7 +68,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Wartungsvertragsverwaltung",
@@ -69,7 +77,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Telefon-Integration",
@@ -77,6 +86,7 @@
     "price": 4,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

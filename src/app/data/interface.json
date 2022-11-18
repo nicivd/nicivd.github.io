@@ -5,6 +5,7 @@
     "price": 35,
     "rent": "pauschal",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

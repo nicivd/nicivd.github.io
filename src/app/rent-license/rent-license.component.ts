@@ -5,8 +5,10 @@ import { Modules } from '../models/module';
 import { Selection } from '../models/selection';
 
 import { ModalService } from '../service/modal.service';
-import { ObservableService } from '../service/selection.service';
+import { SelectionService } from '../service/selection.service';
 import { AdditionService } from '../service/total.service';
+import { DependencyService } from '../service/dependency.service';
+import { BundleService } from '../service/bundle.service';
 
 import mainModulesdata from '../data/mainmodule.json';
 import bundlesData from '../data/bundle.json';
@@ -18,7 +20,6 @@ import regData from '../data/registration-programm.json';
 import appData from '../data/app.json';
 import webserviceData from '../data/webservice.json';
 import interfaceData from '../data/interface.json';
-import { DependencyService } from '../service/dependency.service';
 
 @Component({
   selector: 'app-rent-license',
@@ -44,13 +45,14 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
 
   constructor(
     private modalService: ModalService,
-    private observableService: ObservableService,
+    private selectionService: SelectionService,
     public additionService: AdditionService,
-    private dependencyService: DependencyService
+    private dependencyService: DependencyService,
+    private bundleService: BundleService
   ) { }
 
   ngOnInit(): void {
-    this.observableService.getSelectionObservable().pipe(takeUntil(this.unsubscribe)).subscribe(
+    this.selectionService.getSelectionObservable().pipe(takeUntil(this.unsubscribe)).subscribe(
       selection => {
         this.selectionList = selection;
       });
@@ -67,17 +69,18 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
 
   public addModule(modulename: string, price: number, rent: string, dependency: number): void {
     this.dependencyService.addDependency(dependency);
-    this.observableService.addModule(modulename, price, rent, dependency);
+    this.selectionService.addModule(modulename, price, rent, dependency);
+    this.bundleService.checkBundle();
     this.getTotalPrice();
   }
 
   public deleteModule(name: string, price: number): void {
-    this.observableService.deleteModule(name, price);
+    this.selectionService.deleteModule(name, price);
     this.dependencyService.getDependency();
     this.getTotalPrice();
   }
   public deletefromSelection(name: string, price: number): void {
-    this.observableService.deletefromSelection(name, price);
+    this.selectionService.deletefromSelection(name, price);
     this.dependencyService.getDependency();
     this.getTotalPrice();
   }

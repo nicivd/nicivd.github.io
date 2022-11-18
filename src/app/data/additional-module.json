@@ -5,7 +5,8 @@
     "price": 28,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "SERVICE MANAGEMENT"
   },
   {
     "name": "Kundeninstallationsverwaltung",
@@ -13,7 +14,8 @@
     "price": 17,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "SERVICE MANAGEMENT"
   },
   {
     "name": "Serviceauftragsverwatlung",
@@ -21,7 +23,8 @@
     "price": 25,
     "rent": "user",
     "dependency": 2,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "SERVICE MANAGEMENT"
   },
   {
     "name": "Einkaufsverwaltung",
@@ -29,7 +32,8 @@
     "price": 25,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "HANDEL"
   },
   {
     "name": "Preisverwaltung",
@@ -37,7 +41,8 @@
     "price": 17,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "HANDEL"
   },
   {
     "name": "Provisionsverwaltung",
@@ -45,7 +50,8 @@
     "price": 17,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "HANDEL"
   },
   {
     "name": "Rückstände/ Reservationen/ Teilrechnungen",
@@ -53,7 +59,8 @@
     "price": 17,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "HANDEL"
   },
   {
     "name": "CRM",
@@ -61,7 +68,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Zählerverwaltung",
@@ -69,7 +77,8 @@
     "price": 17,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Ressourcenverwaltung",
@@ -77,7 +86,8 @@
     "price": 25,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Zeitverwaltung",
@@ -85,6 +95,7 @@
     "price": 9,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

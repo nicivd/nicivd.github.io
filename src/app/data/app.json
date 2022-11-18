@@ -5,7 +5,8 @@
     "price": 3,
     "rent": "user",
     "dependency": 3,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Leistungserfassung mobile",
@@ -13,6 +14,7 @@
     "price": 9,
     "rent": "user",
     "dependency": 3,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

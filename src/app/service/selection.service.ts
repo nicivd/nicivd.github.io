@@ -9,7 +9,7 @@ import { DiscountService } from './discount.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ObservableService {
+export class SelectionService {
 
   public selectionSubject = new BehaviorSubject<Array<Selection>>([]);
   public selectionList = Array<Selection>();

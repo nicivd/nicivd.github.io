@@ -5,7 +5,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "KMU CLASSIC"
   },
   {
     "name": "Artikel- und Lagerverwaltung",
@@ -13,7 +14,8 @@
     "price": 17,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "KMU CLASSIC"
   },
   {
     "name": "Auftragsbearbeitung",
@@ -21,7 +23,8 @@
     "price": 25,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "KMU CLASSIC"
   },
   {
     "name": "Debitorenbuchhaltung",
@@ -29,7 +32,8 @@
     "price": 13,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "KMU CLASSIC"
   },
   {
     "name": "Kreditorenbuchhaltung",
@@ -37,7 +41,8 @@
     "price": 13,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "KMU CLASSIC"
   },
   {
     "name": "Finanzbuchhaltung",
@@ -45,7 +50,8 @@
     "price": 25,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": "KMU CLASSIC"
   },
   {
     "name": "Einnahmen- Ausgabenrechnung",
@@ -53,6 +59,7 @@
     "price": 4,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

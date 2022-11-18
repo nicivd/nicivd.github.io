@@ -5,7 +5,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Leistungserfassung",
@@ -13,7 +14,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "CRM Erfassung",
@@ -21,7 +23,8 @@
     "price": 9,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Zeiterfassung",
@@ -29,6 +32,7 @@
     "price": 4,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]
