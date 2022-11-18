@@ -13,7 +13,7 @@ export class AdditionService {
     private observableService: ObservableService
   ) { }
 
-  getTotalPrice(): number {
+  public getTotalPrice(): number {
     let totalprice: number = 0;
     this.observableService.selectionList.forEach((element) => {
       totalprice += element.price;

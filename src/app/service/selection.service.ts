@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+
 import { Selection } from '../models/selection';
 
 import { ToastService } from './toast.service';
+import { DiscountService } from './discount.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +12,11 @@ import { ToastService } from './toast.service';
 export class ObservableService {
 
   public selectionSubject = new BehaviorSubject<Array<Selection>>([]);
-
   public selectionList = Array<Selection>();
 
   constructor(
-    private toastService: ToastService
+    private toastService: ToastService,
+    private discountService: DiscountService
   ) { }
 
   public getSelectionObservable(): Observable<Array<Selection>> {
@@ -32,7 +34,7 @@ export class ObservableService {
         if (name == module.name) {
           if (module.rent == 'user') {
             module.quantity++;
-            module.price = module.price + moduleprice;
+            this.addDiscount(module.name, moduleprice);
           }
           else {
             this.showNoQuantityToast();
@@ -70,5 +72,14 @@ export class ObservableService {
 
   public showNoQuantityToast(): void {
     this.toastService.show('Achtung: pauschale Module nur einmal buchbar !', { classname: 'bg-danger text-light', delay: 6000 });
+  }
+
+  public addDiscount(name: string, originalPrice: number): void {
+    this.selectionList.forEach(module => {
+      if (name == module.name) {
+        module.price = this.discountService.getDiscount(module.quantity, originalPrice);
+        module.discount = this.discountService.getENUM(module.quantity);
+      }
+    })
   }
 }
