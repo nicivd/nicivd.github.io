@@ -5,7 +5,8 @@
     "price": 75,
     "rent": "user",
     "dependency": 0,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "SERVICE MANAGEMENT",
@@ -13,7 +14,8 @@
     "price": 52,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "HANDEL",
@@ -21,6 +23,7 @@
     "price": 57,
     "rent": "user",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

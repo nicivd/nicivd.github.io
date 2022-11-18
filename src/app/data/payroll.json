@@ -5,7 +5,8 @@
     "price": 29,
     "rent": "pauschal",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Lohnbuchhaltung 10",
@@ -13,7 +14,8 @@
     "price": 49,
     "rent": "pauschal",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Lohnbuchhaltung 25",
@@ -21,7 +23,8 @@
     "price": 79,
     "rent": "pauschal",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Lohnbuchhaltung 50",
@@ -29,7 +32,8 @@
     "price": 119,
     "rent": "pauschal",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Lohnbuchhaltung 150",
@@ -37,7 +41,8 @@
     "price": 199,
     "rent": "pauschal",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   },
   {
     "name": "Lohnbuchhaltung 150+",
@@ -45,6 +50,7 @@
     "price": 279,
     "rent": "pauschal",
     "dependency": 1,
-    "quantity": 0
+    "quantity": 0,
+    "bundle": ""
   }
 ]

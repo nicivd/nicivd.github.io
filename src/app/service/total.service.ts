@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { ObservableService } from './observable.service';
+import { SelectionService } from './selection.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +10,15 @@ export class AdditionService {
   public total: number = 0;
 
   constructor(
-    private observableService: ObservableService
+    private selectionService: SelectionService
   ) { }
 
-  getTotalPrice(): number {
+  public getTotalPrice(): number {
     let totalprice: number = 0;
-    this.observableService.selectionList.forEach((element) => {
+    this.selectionService.selectionList.forEach((element) => {
       totalprice += element.price;
     });
     this.total = totalprice;
-    console.log(this.total);
     return totalprice;
   }
 }
