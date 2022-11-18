@@ -54,7 +54,8 @@ export class ObservableService {
           this.selectionList.splice(index, 1);
         } else {
           module.quantity--;
-          module.price = module.price - price;
+          module.price = this.discountService.getDiscount(module.quantity, price);
+          module.discount = this.discountService.getENUM(module.quantity);
         }
       }
     });

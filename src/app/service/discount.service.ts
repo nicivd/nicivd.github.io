@@ -15,7 +15,8 @@ export class DiscountService {
     let totalPrice = originalPrice * quantity;
     let discount = totalPrice / 100 * enumDiscount;
     let discountPrice = totalPrice - discount;
-    return discountPrice;
+    let roundedDiscountPrice = Math.round((discountPrice + Number.EPSILON) * 100) / 100;
+    return roundedDiscountPrice;
   }
 
   public getENUM(quantity: number): number {
@@ -95,8 +96,10 @@ export class DiscountService {
       case 25: {
         return Discount.Benutzer25;
       }
+      default: {
+        return Discount.Benutzer25;
+      }
     }
-    return 0;
   }
 
 
