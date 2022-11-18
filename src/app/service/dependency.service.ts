@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ObservableService } from './observable.service';
+import { ObservableService } from './selection.service';
 import { ToastService } from './toast.service';
 import { Selection } from '../models/selection';
 

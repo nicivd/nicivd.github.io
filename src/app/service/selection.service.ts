@@ -40,7 +40,6 @@ export class ObservableService {
         }
       })
     }
-    console.log(this.selectionList);
     return this.selectionList;
 
   }

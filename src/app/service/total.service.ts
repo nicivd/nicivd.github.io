@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { ObservableService } from './observable.service';
+import { ObservableService } from './selection.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,6 @@ export class AdditionService {
       totalprice += element.price;
     });
     this.total = totalprice;
-    console.log(this.total);
     return totalprice;
   }
 }

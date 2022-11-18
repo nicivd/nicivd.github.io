@@ -6,7 +6,7 @@
 </head>
 
 
-<body class="px-3" style="padding-bottom:80px;">
+<body class="px-3" style="padding-bottom:335px;">
   <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
     <ngb-panel>
       <ng-template ngbPanelTitle>
@@ -288,7 +288,6 @@
         </div>
       </ng-template>
     </ngb-panel>
-
   </ngb-accordion>
 
   <hr>
@@ -299,37 +298,40 @@
           <h5><b>Auswahl</b></h5>
         </ng-template>
         <ng-template ngbPanelContent>
-          <div class=" container px-1">
-            <div class="row">
-              <div class="col-6">
-                <h6>Bezeichnung</h6>
+          <div class="accordion-body" style="max-height: 200px;
+  overflow-y: scroll;">
+            <div class=" container px-1">
+              <div class="row">
+                <div class="col-6">
+                  <h6>Bezeichnung</h6>
+                </div>
+                <div class="col-2">
+                  <h6>Preis</h6>
+                </div>
+                <div class="col-2">
+                  <h6>Menge</h6>
+                </div>
+                <div class="col-1">
+                  <h6>Rabatt</h6>
+                </div>
               </div>
-              <div class="col-2">
-                <h6>Preis</h6>
+              <div class="row" *ngFor="let selection of selectionList" style="max-height: 2000px; overflow-y: scroll;">
+                <div class="col-6 modulename">
+                  <button class="btn" (click)="deletefromSelection(selection.name, selection.price)"><i
+                      class="bi bi-x"></i></button>
+                  {{selection.name}}
+                </div>
+                <div class="col-2">
+                  {{selection.price}}.-
+                </div>
+                <div class="col-2">
+                  {{selection.quantity}}
+                </div>
+                <div class="col-1">
+                  {{selection.discount}}%
+                </div>
+                <hr>
               </div>
-              <div class="col-2">
-                <h6>Menge</h6>
-              </div>
-              <div class="col-1">
-                <h6>Rabatt</h6>
-              </div>
-            </div>
-            <div class="row" *ngFor="let selection of selectionList">
-              <div class="col-6 modulename">
-                <button class="btn" (click)="deletefromSelection(selection.name, selection.price)"><i
-                    class="bi bi-x"></i></button>
-                {{selection.name}}
-              </div>
-              <div class="col-2">
-                {{selection.price}}.-
-              </div>
-              <div class="col-2">
-                {{selection.quantity}}
-              </div>
-              <div class="col-1">
-                {{selection.discount}}%
-              </div>
-              <hr>
             </div>
           </div>
         </ng-template>

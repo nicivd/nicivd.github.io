@@ -5,7 +5,7 @@ import { Modules } from '../models/module';
 import { Selection } from '../models/selection';
 
 import { ModalService } from '../service/modal.service';
-import { ObservableService } from '../service/observable.service';
+import { ObservableService } from '../service/selection.service';
 import { AdditionService } from '../service/total.service';
 
 import mainModulesdata from '../data/mainmodule.json';
