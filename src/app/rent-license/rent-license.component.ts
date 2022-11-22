@@ -44,7 +44,7 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   private unsubscribe = new Subject<void>();
 
   constructor(
-    private modalService: ModalService,
+    public modalService: ModalService,
     private selectionService: SelectionService,
     public additionService: AdditionService,
     private dependencyService: DependencyService,
@@ -61,10 +61,6 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe.next();
     this.unsubscribe.unsubscribe();
-  }
-
-  public openModal(content: any): void {
-    this.modalService.open(content);
   }
 
   public addModule(modulename: string, price: number, rent: string, dependency: number): void {

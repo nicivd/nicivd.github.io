@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { RentLicenseComponent } from './rent-license/rent-license.component';
 import { ToastComponent } from './shared/toast/toast.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ToastComponent } from './shared/toast/toast.component';
     HomeComponent,
     RentLicenseComponent,
     ToastComponent,
+    ModalComponent,
 
   ],
   imports: [

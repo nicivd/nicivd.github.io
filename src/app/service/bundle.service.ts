@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Modules } from '../models/module';
+import { ModalService } from './modal.service';
 
 import { SelectionService } from './selection.service';
 
@@ -7,8 +9,38 @@ import { SelectionService } from './selection.service';
 })
 export class BundleService {
 
+  private KMUCLASSIC: Modules = {
+    name: 'KMU CLASSIC',
+    price: 75,
+    rent: 'user',
+    dependency: 0,
+    category: 'Bundles',
+    quantity: 0,
+    bundle: ''
+  };
+  private SERVICEMANAGEMENT: Modules = {
+    name: 'SERVICE MANAGEMENT',
+    price: 53,
+    rent: 'user',
+    dependency: 1,
+    category: 'Bundles',
+    quantity: 0,
+    bundle: ''
+  };
+
+  private HANDEL: Modules = {
+    name: 'HANDEL',
+    price: 57,
+    rent: 'user',
+    dependency: 1,
+    category: 'Bundles',
+    quantity: 0,
+    bundle: ''
+  };
+
   constructor(
-    private selectionService: SelectionService
+    private selectionService: SelectionService,
+    private modalService: ModalService
   ) { }
 
   public checkBundle(): void {
@@ -18,6 +50,7 @@ export class BundleService {
           if (this.selectionService.selectionList.find(module => module.name == 'Debitorenbuchhaltung')) {
             if (this.selectionService.selectionList.find(module => module.name == 'Kreditorenbuchhaltung')) {
               if (this.selectionService.selectionList.find(module => module.name == 'Finanzbuchhaltung')) {
+                this.modalService.open(this.KMUCLASSIC, 27);
                 this.addKMUCLASSIC();
               }
             }
@@ -28,6 +61,7 @@ export class BundleService {
     if (this.selectionService.selectionList.find(module => module.name == 'Leistungsverwaltung')) {
       if (this.selectionService.selectionList.find(module => module.name == 'Kundeninstallationsverwaltung')) {
         if (this.selectionService.selectionList.find(module => module.name == 'Serviceauftragsverwatlung')) {
+          this.modalService.open(this.SERVICEMANAGEMENT, 17);
           this.addSERVICEMANAGEMENT();
         }
       }
@@ -36,6 +70,7 @@ export class BundleService {
       if (this.selectionService.selectionList.find(module => module.name == 'Preisverwaltung')) {
         if (this.selectionService.selectionList.find(module => module.name == 'Provisionsverwaltung')) {
           if (this.selectionService.selectionList.find(module => module.name == 'Rückstände/ Reservationen/ Teilrechnungen')) {
+            this.modalService.open(this.HANDEL, 19);
             this.addHANDEL();
           }
         }

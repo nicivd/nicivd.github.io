@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h3 class="modal-title">Hinweis Proffix Paket</h3>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <h5>Die ausgewählten Module sind in einem Paket erhältlich:</h5>
+  <div class="container">
+    <div class="row">
+      <div class="col-7 xl-8">
+        {{name}}
+      </div>
+      <div class="col">
+        {{price}}.-
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <p>Die Module werden durch das Paket im Warenkorb ersetzt.</p>
+  <h5>Sie sparen {{discount}}.- !</h5>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">OK</button>
+</div>
