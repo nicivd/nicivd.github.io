@@ -17,17 +17,18 @@
         <div class="container">
           <div class="row" *ngFor="let bundle of bundles">
             <div class="col-6 xl-8 modulename">
-              {{bundle.name}}
+              {{bundle.name}} <button type="button" class="btn btn-sm" (click)="getBundleInfo(bundle.name)"><i
+                  class="bi bi-info-circle"></i></button>
             </div>
             <div class="col">
               {{bundle.price}}.-
             </div>
-            <div class="col-2">
-              <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(bundle.name, bundle.price)">
+            <div class="col-4">
+              <div class="input-group justify-content-end align-items-center">
+                <button type="button" class="btn btn-sm" (click)="deleteModule(bundle.name, bundle.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
-                <button type="button" value="+" class="btn"
+                <button type="button" value="+" class="btn btn-sm"
                   (click)="addModule(bundle.name, bundle.price, bundle.rent, bundle.dependency)">
                   <i class="bi bi-plus-circle"></i>
                 </button>
@@ -47,18 +48,18 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let mainModule of mainmodules">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-6 xl-8 modulename">
               {{mainModule.name}}
             </div>
             <div class="col">
               {{mainModule.price}}.-
             </div>
-            <div class="col-2">
+            <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(mainModule.name, mainModule.price)">
+                <button type="button" class="btn btn-sm" (click)="deleteModule(mainModule.name, mainModule.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
-                <button type="button" value="+" class="btn"
+                <button type="button" value="+" class="btn btn-sm"
                   (click)="addModule(mainModule.name, mainModule.price, mainModule.rent, mainModule.dependency)">
                   <i class="bi bi-plus-circle"></i>
                 </button>
@@ -102,18 +103,18 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let addition of additionModules">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-6 xl-8 modulename">
               {{addition.name}}
             </div>
             <div class="col">
               {{addition.price}}.-
             </div>
-            <div class="col-2">
+            <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(addition.name, addition.price)">
+                <button type="button" class="btn btn-sm" (click)="deleteModule(addition.name, addition.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
-                <button type="button" class="btn"
+                <button type="button" class="btn btn-sm"
                   (click)="addModule(addition.name, addition.price, addition.rent, addition.dependency)">
                   <i class="bi bi-plus-circle"></i>
                 </button>
@@ -132,18 +133,18 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let option of options">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-6 xl-8 modulename">
               {{option.name}}
             </div>
             <div class="col">
               {{option.price}}.-
             </div>
-            <div class="col-2">
+            <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(option.name, option.price)">
+                <button type="button" class="btn btn-sm" (click)="deleteModule(option.name, option.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
-                <button type="button" class="btn"
+                <button type="button" class="btn btn-sm"
                   (click)="addModule(option.name, option.price, option.rent, option.dependency)">
                   <i class="bi bi-plus-circle"></i>
                 </button>
@@ -186,18 +187,18 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let registration of registrations">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-6 xl-8 modulename">
               {{registration.name}}
             </div>
             <div class="col">
               {{registration.price}}.-
             </div>
-            <div class="col-2">
+            <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(registration.name, registration.price)">
+                <button type="button" class="btn btn-sm" (click)="deleteModule(registration.name, registration.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
-                <button type="button" class="btn"
+                <button type="button" class="btn btn-sm"
                   (click)="addModule(registration.name, registration.price, registration.rent, registration.dependency)">
                   <i class="bi bi-plus-circle"></i>
                 </button>
@@ -216,18 +217,19 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let app of apps">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-6 xl-8 modulename">
               {{app.name}}
             </div>
             <div class="col">
               {{app.price}}.-
             </div>
-            <div class="col-2">
+            <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
-                <button type="button" class="btn" (click)="deleteModule(app.name, app.price)">
+                <button type="button" class="btn btn-sm" (click)="deleteModule(app.name, app.price)">
                   <i class="bi bi-dash-circle"></i>
                 </button>
-                <button type="button" class="btn" (click)="addModule(app.name, app.price, app.rent, app.dependency)">
+                <button type="button" class="btn btn-sm"
+                  (click)="addModule(app.name, app.price, app.rent, app.dependency)">
                   <i class="bi bi-plus-circle"></i>
                 </button>
               </div>
@@ -316,8 +318,9 @@
               </div>
               <div class="row" *ngFor="let selection of selectionList">
                 <div class="col-6 modulename">
-                  <button class="btn" (click)="deletefromSelection(selection.name, selection.price)"><i
-                      class="bi bi-x"></i></button>
+                  <button class="btn" (click)="deletefromSelection(selection.name, selection.price)">
+                    <i class="bi bi-x"></i>
+                  </button>
                   {{selection.name}}
                 </div>
                 <div class="col-2">

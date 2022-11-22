@@ -84,4 +84,33 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
     this.additionService.getTotalPrice();
   }
 
+  public getBundleInfo(name: string): void {
+    let bundleModules: Modules[] = [];
+    if (name == 'KMU CLASSIC') {
+      this.mainmodules.forEach(module => {
+        if (module.bundle == 'KMU CLASSIC') {
+          bundleModules.push(module);
+        }
+      })
+      this.modalService.openBundleInfoModal(bundleModules, name);
+    }
+    if (name == 'SERVICE MANAGEMENT') {
+      this.additionModules.forEach(module => {
+        if (module.bundle == 'SERVICE MANAGEMENT') {
+          bundleModules.push(module);
+        }
+      })
+      this.modalService.openBundleInfoModal(bundleModules, name);
+    }
+    if (name == 'HANDEL') {
+      this.additionModules.forEach(module => {
+        if (module.bundle == 'HANDEL') {
+          bundleModules.push(module);
+        }
+      })
+      this.modalService.openBundleInfoModal(bundleModules, name);
+    }
+
+  }
+
 }

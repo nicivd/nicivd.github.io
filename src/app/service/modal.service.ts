@@ -10,11 +10,21 @@ export class ModalService {
 
   constructor(private modalService: NgbModal) { }
 
-  public open(bundle: Modules, discount: number): void {
+  public openBundleModal(bundle: Modules, discount: number): void {
     const modal = this.modalService.open(ModalComponent);
+    modal.componentInstance.title = 'Hinweis Proffix Paket';
+    modal.componentInstance.headerText = 'Die ausgewählten Module sind in einem Paket erhältlich:';
     modal.componentInstance.name = bundle.name;
     modal.componentInstance.price = bundle.price;
     modal.componentInstance.discount = discount;
+  }
+
+  public openBundleInfoModal(modules: Array<Modules>, name: string): void {
+    const modal = this.modalService.open(ModalComponent);
+    modal.componentInstance.title = 'Proffix Paket ' + name;
+    modal.componentInstance.headerText = 'Folgende Module sind im Paket enthalten:';
+    modal.componentInstance.bundleModulesInfo = true;
+    modal.componentInstance.modulesList = modules;
   }
 
 }

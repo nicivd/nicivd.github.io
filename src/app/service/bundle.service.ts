@@ -50,7 +50,7 @@ export class BundleService {
           if (this.selectionService.selectionList.find(module => module.name == 'Debitorenbuchhaltung')) {
             if (this.selectionService.selectionList.find(module => module.name == 'Kreditorenbuchhaltung')) {
               if (this.selectionService.selectionList.find(module => module.name == 'Finanzbuchhaltung')) {
-                this.modalService.open(this.KMUCLASSIC, 27);
+                this.modalService.openBundleModal(this.KMUCLASSIC, 27);
                 this.addKMUCLASSIC();
               }
             }
@@ -61,7 +61,7 @@ export class BundleService {
     if (this.selectionService.selectionList.find(module => module.name == 'Leistungsverwaltung')) {
       if (this.selectionService.selectionList.find(module => module.name == 'Kundeninstallationsverwaltung')) {
         if (this.selectionService.selectionList.find(module => module.name == 'Serviceauftragsverwatlung')) {
-          this.modalService.open(this.SERVICEMANAGEMENT, 17);
+          this.modalService.openBundleModal(this.SERVICEMANAGEMENT, 17);
           this.addSERVICEMANAGEMENT();
         }
       }
@@ -70,7 +70,7 @@ export class BundleService {
       if (this.selectionService.selectionList.find(module => module.name == 'Preisverwaltung')) {
         if (this.selectionService.selectionList.find(module => module.name == 'Provisionsverwaltung')) {
           if (this.selectionService.selectionList.find(module => module.name == 'Rückstände/ Reservationen/ Teilrechnungen')) {
-            this.modalService.open(this.HANDEL, 19);
+            this.modalService.openBundleModal(this.HANDEL, 19);
             this.addHANDEL();
           }
         }

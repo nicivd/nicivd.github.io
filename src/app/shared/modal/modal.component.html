@@ -1,10 +1,11 @@
 <div class="modal-header">
-  <h3 class="modal-title">Hinweis Proffix Paket</h3>
+  <h3 class="modal-title">{{title}}</h3>
   <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
 </div>
 <div class="modal-body">
-  <h5>Die ausgewählten Module sind in einem Paket erhältlich:</h5>
-  <div class="container">
+  <h5>{{headerText}}</h5>
+
+  <div class="container" *ngIf="!bundleModulesInfo">
     <div class="row">
       <div class="col-7 xl-8">
         {{name}}
@@ -14,10 +15,25 @@
       </div>
     </div>
   </div>
-  <hr>
 
-  <p>Die Module werden durch das Paket im Warenkorb ersetzt.</p>
-  <h5>Sie sparen {{discount}}.- !</h5>
+  <div class="container" *ngIf="bundleModulesInfo">
+    <div class="row" *ngFor="let module of modulesList">
+      <div class="col-8">
+        {{module.name}}
+      </div>
+      <div class="col">
+        <b>{{module.price}}.-</b>
+      </div>
+      <hr>
+    </div>
+
+  </div>
+
+  <div *ngIf="!bundleModulesInfo">
+    <hr>
+    <p>Die Module werden durch das Paket im Warenkorb ersetzt.</p>
+    <h5>Sie sparen {{discount}}.- !</h5>
+  </div>
 
 </div>
 <div class="modal-footer">
