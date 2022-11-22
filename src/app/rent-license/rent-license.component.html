@@ -299,7 +299,7 @@
         </ng-template>
         <ng-template ngbPanelContent>
           <div class="accordion-body" style="max-height: 200px; overflow-y: scroll;">
-            <div class=" container px-1">
+            <div class="container px-1">
               <div class="row">
                 <div class="col-6">
                   <h6>Bezeichnung</h6>
@@ -314,7 +314,7 @@
                   <h6>Rabatt</h6>
                 </div>
               </div>
-              <div class="row" *ngFor="let selection of selectionList" style="max-height: 2000px; overflow-y: scroll;">
+              <div class="row" *ngFor="let selection of selectionList">
                 <div class="col-6 modulename">
                   <button class="btn" (click)="deletefromSelection(selection.name, selection.price)"><i
                       class="bi bi-x"></i></button>

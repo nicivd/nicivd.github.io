@@ -53,7 +53,7 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.selectionService.getSelectionObservable().pipe(takeUntil(this.unsubscribe)).subscribe(
-      selection => {
+      (selection: Selection[]) => {
         this.selectionList = selection;
       });
   }

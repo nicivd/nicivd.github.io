@@ -18,6 +18,7 @@ export class AdditionService {
     this.selectionService.selectionList.forEach((element) => {
       totalprice += element.price;
     });
+    // let roundedPrice = (Math.round(totalprice * 20) / 20).toFixed(2);
     this.total = totalprice;
     return totalprice;
   }
