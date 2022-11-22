@@ -15,7 +15,8 @@ export class DiscountService {
     let totalPrice = originalPrice * quantity;
     let discount = totalPrice / 100 * enumDiscount;
     let discountPrice = totalPrice - discount;
-    let roundedDiscountPrice = Math.round((discountPrice + Number.EPSILON) * 100) / 100;
+    let roundedStringPrice = (Math.round(discountPrice * 20) / 20).toFixed(2);
+    let roundedDiscountPrice = + roundedStringPrice;
     return roundedDiscountPrice;
   }
 

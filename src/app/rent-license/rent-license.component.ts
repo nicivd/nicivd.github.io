@@ -6,7 +6,7 @@ import { Selection } from '../models/selection';
 
 import { ModalService } from '../service/modal.service';
 import { SelectionService } from '../service/selection.service';
-import { AdditionService } from '../service/total.service';
+import { TotalService } from '../service/total.service';
 import { DependencyService } from '../service/dependency.service';
 import { BundleService } from '../service/bundle.service';
 
@@ -44,16 +44,16 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   private unsubscribe = new Subject<void>();
 
   constructor(
-    private modalService: ModalService,
+    public modalService: ModalService,
     private selectionService: SelectionService,
-    public additionService: AdditionService,
+    public additionService: TotalService,
     private dependencyService: DependencyService,
     private bundleService: BundleService
   ) { }
 
   ngOnInit(): void {
     this.selectionService.getSelectionObservable().pipe(takeUntil(this.unsubscribe)).subscribe(
-      selection => {
+      (selection: Selection[]) => {
         this.selectionList = selection;
       });
   }
@@ -61,10 +61,6 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe.next();
     this.unsubscribe.unsubscribe();
-  }
-
-  public openModal(content: any): void {
-    this.modalService.open(content);
   }
 
   public addModule(modulename: string, price: number, rent: string, dependency: number): void {
@@ -86,6 +82,35 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   }
   public getTotalPrice(): void {
     this.additionService.getTotalPrice();
+  }
+
+  public getBundleInfo(name: string): void {
+    let bundleModules: Modules[] = [];
+    if (name == 'KMU CLASSIC') {
+      this.mainmodules.forEach(module => {
+        if (module.bundle == 'KMU CLASSIC') {
+          bundleModules.push(module);
+        }
+      })
+      this.modalService.openBundleInfoModal(bundleModules, name);
+    }
+    if (name == 'SERVICE MANAGEMENT') {
+      this.additionModules.forEach(module => {
+        if (module.bundle == 'SERVICE MANAGEMENT') {
+          bundleModules.push(module);
+        }
+      })
+      this.modalService.openBundleInfoModal(bundleModules, name);
+    }
+    if (name == 'HANDEL') {
+      this.additionModules.forEach(module => {
+        if (module.bundle == 'HANDEL') {
+          bundleModules.push(module);
+        }
+      })
+      this.modalService.openBundleInfoModal(bundleModules, name);
+    }
+
   }
 
 }

@@ -1,0 +1,50 @@
+<div class="modal-header">
+  <h3 class="modal-title">{{title}}</h3>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <h5>{{headerText}}</h5>
+
+  <div class="container" *ngIf="!bundleModulesInfo">
+    <div class="row">
+      <div class="col-7 xl-8">
+        {{name}}
+      </div>
+      <div class="col">
+        {{price}}.-
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="bundleModulesInfo">
+    <div class="row" *ngFor="let module of modulesList">
+      <div class="col-8">
+        {{module.name}}
+      </div>
+      <div class="col">
+        {{module.price}}.-
+      </div>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <p>Total einzeln: </p>
+      </div>
+      <div class="col">
+        <b>{{totalBundleSingle}}.-</b>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div *ngIf="!bundleModulesInfo">
+    <hr>
+    <p>Die Module werden durch das Paket im Warenkorb ersetzt.</p>
+    <h5>Sie sparen {{discount}}.- !</h5>
+  </div>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">OK</button>
+</div>
