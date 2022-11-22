@@ -16,6 +16,7 @@ export class ModalComponent {
 
   @Input() discount: number = 0;
   @Input() modulesList: Array<Modules> = [];
+  @Input() totalBundleSingle: number = 0;
 
   @Input() bundleModulesInfo: boolean = false;
 

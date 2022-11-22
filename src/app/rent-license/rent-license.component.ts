@@ -6,7 +6,7 @@ import { Selection } from '../models/selection';
 
 import { ModalService } from '../service/modal.service';
 import { SelectionService } from '../service/selection.service';
-import { AdditionService } from '../service/total.service';
+import { TotalService } from '../service/total.service';
 import { DependencyService } from '../service/dependency.service';
 import { BundleService } from '../service/bundle.service';
 
@@ -46,7 +46,7 @@ export class RentLicenseComponent implements OnInit, OnDestroy {
   constructor(
     public modalService: ModalService,
     private selectionService: SelectionService,
-    public additionService: AdditionService,
+    public additionService: TotalService,
     private dependencyService: DependencyService,
     private bundleService: BundleService
   ) { }
