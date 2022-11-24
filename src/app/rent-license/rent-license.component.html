@@ -16,12 +16,12 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let bundle of bundles">
-            <div class="col-6 xl-8 modulename">
+            <div class="col-5 xl-8 smallText">
               {{bundle.name}} <button type="button" class="btn btn-sm" (click)="getBundleInfo(bundle.name)"><i
                   class="bi bi-info-circle"></i></button>
             </div>
-            <div class="col">
-              {{bundle.price}}.-
+            <div class="col smallText">
+              CHF {{bundle.price}}.-
             </div>
             <div class="col-4">
               <div class="input-group justify-content-end align-items-center">
@@ -48,11 +48,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let mainModule of mainmodules">
-            <div class="col-6 xl-8 modulename">
+            <div class="col-5 xl-8 smallText">
               {{mainModule.name}}
             </div>
-            <div class="col">
-              {{mainModule.price}}.-
+            <div class="col smallText">
+              CHF {{mainModule.price}}.-
             </div>
             <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
@@ -78,11 +78,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let payroll of payroll">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-7 xl-8 smallText">
               {{payroll.name}}
             </div>
-            <div class="col">
-              {{payroll.price}}.-
+            <div class="col smallText">
+              CHF {{payroll.price}}.-
             </div>
             <div class="col-2">
               <button type="button" class="btn"
@@ -103,11 +103,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let addition of additionModules">
-            <div class="col-6 xl-8 modulename">
+            <div class="col-6 xl-8 smallText">
               {{addition.name}}
             </div>
-            <div class="col">
-              {{addition.price}}.-
+            <div class="col smallText">
+              CHF {{addition.price}}.-
             </div>
             <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
@@ -133,11 +133,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let option of options">
-            <div class="col-6 xl-8 modulename">
+            <div class="col-6 xl-8 smallText">
               {{option.name}}
             </div>
-            <div class="col">
-              {{option.price}}.-
+            <div class="col smallText">
+              CHF {{option.price}}.-
             </div>
             <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
@@ -163,11 +163,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let tool of tools">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-5 xl-8 smallText">
               {{tool.name}}
             </div>
-            <div class="col">
-              {{tool.price}}.-
+            <div class="col smallText">
+              CHF {{tool.price}}.-
             </div>
             <div class="col">
               <button type="button" class="btn" (click)="addModule(tool.name, tool.price, tool.rent, tool.dependency)">
@@ -187,11 +187,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let registration of registrations">
-            <div class="col-6 xl-8 modulename">
+            <div class="col-5 xl-8 smallText">
               {{registration.name}}
             </div>
-            <div class="col">
-              {{registration.price}}.-
+            <div class="col smallText">
+              CHF {{registration.price}}.-
             </div>
             <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
@@ -217,11 +217,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let app of apps">
-            <div class="col-6 xl-8 modulename">
+            <div class="col-5 xl-8 smallText">
               {{app.name}}
             </div>
-            <div class="col">
-              {{app.price}}.-
+            <div class="col smallText">
+              CHF {{app.price}}.-
             </div>
             <div class="col-4">
               <div class="input-group w-auto justify-content-end align-items-center">
@@ -247,11 +247,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let webservice of webservices">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-7 xl-8 smallText">
               {{webservice.name}}
             </div>
-            <div class="col">
-              {{webservice.price}}.-
+            <div class="col smallText">
+              CHF {{webservice.price}}.-
             </div>
             <div class="col">
               <button type="button" class="btn"
@@ -272,11 +272,11 @@
       <ng-template ngbPanelContent>
         <div class="container">
           <div class="row" *ngFor="let interface of interfaces">
-            <div class="col-7 xl-8 modulename">
+            <div class="col-6 xl-8 smallText">
               {{interface.name}}
             </div>
-            <div class="col">
-              {{interface.price}}.-
+            <div class="col smallText">
+              CHF {{interface.price}}.-
             </div>
             <div class="col">
 
@@ -316,13 +316,13 @@
                 </div>
               </div>
               <div class="row" *ngFor="let selection of selectionList">
-                <div class="col-6 modulename">
+                <div class="col-6 smallText">
                   <button class="btn" (click)="deletefromSelection(selection.name, selection.price)">
                     <i class="bi bi-x"></i>
                   </button>
                   {{selection.name}}
                 </div>
-                <div class="col-2">
+                <div class="col-2 smallText">
                   CHF {{selection.price | number:'1.2-2'}}.-
                 </div>
                 <div class="col-2" id="quantity">
