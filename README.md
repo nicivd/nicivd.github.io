@@ -26,6 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Deployment Applikation Build
+## Deployment Application Build
 
-To look at the current Version of the Applikation visit the link `https://nicivd.github.io/Lizenzkalkulator` and try it out. 
+To look at the current Version of the application visit the link `https://nicivd.github.io/Lizenzkalkulator` and try it out. 
