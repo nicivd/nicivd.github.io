@@ -11,7 +11,7 @@
         {{name}}
       </div>
       <div class="col">
-        {{price}}.-
+        CHF {{price}}.-
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@
         {{module.name}}
       </div>
       <div class="col">
-        {{module.price}}.-
+        CHF {{module.price}}.-
       </div>
       <hr>
     </div>
@@ -41,7 +41,7 @@
   <div *ngIf="!bundleModulesInfo">
     <hr>
     <p>Die Module werden durch das Paket im Warenkorb ersetzt.</p>
-    <h5>Sie sparen {{discount}}.- !</h5>
+    <h5>Sie sparen CHF {{discount}}.- !</h5>
   </div>
 
 </div>
